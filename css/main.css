@@ -62,9 +62,15 @@ nav ul li{
     
 }
 
+/*TRANSFORMACION PARA LAS ETIQUETAS LI*/
+nav ul li:hover{
+    transform: scale(1.2);
+}
+
 /*etiquetas li en general*/
 li{
     list-style: none;
+    transition: 0.5s;
     
 }
 
@@ -74,9 +80,9 @@ li a{
     text-decoration: none;
 }
 
-/*para darle efecto cuando posiciono el cursor sobre los li*/
+/*para darle efecto  cuando posiciono el cursor sobre los li*/
 li a:hover{
-    text-decoration: underline;
+    text-decoration: none;
     color: whitesmoke;
 }
 
@@ -104,19 +110,35 @@ footer {
 .iconosRedesHeader{
     height: 20px;
     margin: 10px;
+
     /*
     position: relative;
     top: -20px; left: 1100px;  */ 
 } 
 
+.iconosRedesHeader:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+}
 
-.iconosRedesFooter {
-    height: 20px;
-    margin: 10px;
+
+.contenedorIconosRedesFooter {    
     grid-area: iconosRedesFooter;
     /*
     position: relative;
     top: 5px; left: 800px; bottom: 200px; */
+}
+
+.iconosRedesFooter{
+    height: 20px;
+    margin: 10px;
+    
+}
+
+
+.iconosRedesFooter:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
 }
 
 /*MEDIA QUERIES MOBILE PARA EL HEADER*/
