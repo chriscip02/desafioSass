@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link de css-->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <title>La Barbería</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="contenedorLogo">
+                <h2>LOGO</h2>
+            </div>
+            <div class="contenedorNav">
+                <nav>
+                    <ul class="contenedorMenu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contenedorIconosHeader">
+                <a href="https://www.facebook.com" target="_blank" > <img src="../media/facebook.png" alt="Icono de facebook" class="iconosRedesHeader"></a>
+                <a href="https://www.instagram.com" target="_blank"> <img src="../media/instagram.png" alt="Icono de instagram" class="iconosRedesHeader"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/whatsapp.png" alt="Icono de whatsapp" class="iconosRedesHeader"></a>
+            </div>
+        </header>
+
+        <main class="mainReservas">
+            <h3 class="tituloIzquierda">Hace tu reserva</h3>
+            <form id="formulario">
+                <br>
+                <label class="itemsFormulario" for="nombre">Tu Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre" id="nombre">
+                <br><br>
+                <label class="itemsFormulario" for="nombre">Tu número de Celular</label>
+                <input type="text" placeholder="Ingrese su contraseña" id="pass">
+                <br><br>
+                <select class="itemsFormulario1" name="sucursal" id="">
+                    <option value="">Elegí la Sucursal</option>
+                    <option value="B">Belgrano</option>
+                    <option value="V">Villa Crespo</option>
+                </select>
+                <br><br>
+                <select class="itemsFormulario1" name="dia" id="">
+                    <option value="">Elegí el día</option>
+                    <option value="Mar">Martes</option>
+                    <option value="Mier">Miércoles</option>
+                    <option value="Juev">Jueves</option>
+                    <option value="Vier">Viernes</option>
+                    <option value="Sab">Sábado</option>
+                </select>
+                <br><br>
+                <select class="itemsFormulario1" name="horario" id="">
+                    <option value="">Horario disponible</option>
+                    <option value="">10 a 11 hs</option>
+                    <option value="">13 a 14 hs</option>
+                    <option value="">14 a 15 hs</option>
+                    <option value="">17 a 18 hs</option>
+                    <option value="">18 a 19 hs</option>
+                </select>
+                <br><br>
+                <input class="itemsFormulario1" type="submit" value="Reservar turno">
+                <input class="itemsFormulario1" type="reset" value="Borrar">
+                <br><br>
+                <p class="textoBlanco">*La información del turno se enviará a tu whatsapp</p>
+            </form>
+        </main>
+        <footer>
+            <div>
+                <h2 class="logoFooter">LOGO</h2>
+            </div>
+            <p class="textoDerechos">2021. Todos los derechos reservados</p>
+            
+            <div class= "iconosRedesFooter">
+                <a href="https://www.facebook.com" target="_blank" > <img src="../media/facebook.png" alt="Icono de facebook" class="iconosRedesFooter"></a>
+                <a href="https://www.instagram.com" target="_blank"> <img src="../media/instagram.png" alt="Icono de instagram" class="iconosRedesFooter"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/whatsapp.png" alt="Icono de whatsapp" class="iconosRedesFooter"></a>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
