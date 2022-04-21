@@ -1,557 +1,171 @@
-/*Reset*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@charset "UTF-8";
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-
-/*GRID AREAS PARA ORDENAR LOS ELEMENTOS DENTRO DEL HEADER*/
-
-
-/* Header (para todos los html el mismo)*/
-header{
-    background-color: rgb(41, 40, 40);
-    padding: 20px;
-    border: solid rgb(32, 32, 32);
-    position: sticky;
-    top: 0px;
-    height: 7rem;
-    display: grid;
-    grid-template-areas: "logo nav iconosHeader";
-    grid-template-columns: 1fr 3fr 1fr;
-    
-    
-}
-
-.contenedorLogo{
-    justify-content: center;
-    grid-area: logo;
-    color: rgb(238 232 170);
-    text-align: center;
-    
-}
-
-.contenedorNav{
-    grid-area: nav;
-}
-
-.contenedorIconosHeader{
-    grid-area: iconosHeader;
-}
-
-.contenedorNav{
-    display: flex;
-    align-items: flex-end;
-    
-    
-}
-
-
-/*para posicionar el menu en el header*/
-.contenedorMenu{
-    display: flex;
-    
-    
-}
-
-
-/*etiquetas li del menu*/
-nav ul li{
+/*HEADER (PARA TODOS LOS HTML EL MISMO)*/
+header {
+  background-color: #292828;
+  padding: 20px;
+  border: solid #202020;
+  position: sticky;
+  top: 0px;
+  height: 7rem;
+  display: grid;
+  grid-template-areas: "logo nav iconosHeader";
+  grid-template-columns: 1fr 3fr 1fr; }
+  header .contenedorLogo {
+    color: blanchedalmond;
+    grid-area: logo; }
+  header .contenedorIconosHeader {
+    grid-area: iconosHeader; }
+  header .contenedorNav {
     margin: 10px;
-    
-}
-
-/*TRANSFORMACION PARA LAS ETIQUETAS LI*/
-nav ul li:hover{
-    transform: scale(1.2);
-}
-
-/*etiquetas li en general*/
-li{
+    grid-area: nav;
+    display: flex;
+    align-items: center; }
+  header .contenedorMenu {
+    display: flex; }
+  header li {
+    margin: 0.5rem;
     list-style: none;
-    transition: 0.5s;
-    
-}
+    transition: 0.5s; }
+    header li:hover {
+      transform: scale(1.2); }
+  header a {
+    color: blanchedalmond;
+    text-decoration: none; }
+    header a:hover {
+      text-decoration: none;
+      color: whitesmoke; }
 
-/*estilo vinculo de li*/
-li a{
-    color: rgb(238 232 170);
-    text-decoration: none;
-}
-
-/*para darle efecto  cuando posiciono el cursor sobre los li*/
-li a:hover{
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-/*footer (para todos los html el mismo*/
+/*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
 footer {
-    background-color: rgb(41, 40, 40);
-    padding: 20px; 
-    border: solid rgb(32, 32, 32);
-    height: 150px;
-    width: 100%;
-    display: grid;
-    grid-template-areas:  "iconosRedesFooter logoFooter"
-                          "derechos derechos" ;    
-}
-
-.logoFooter {
-    color: rgb(238 232 170);
+  background-color: #292828;
+  padding: 20px;
+  border: solid #202020;
+  height: 7rem;
+  display: grid;
+  grid-template-areas: "iconosRedesFooter logoFooter" "derechos derechos"; }
+  footer .logoFooter {
+    color: blanchedalmond;
     text-align: right;
     padding-bottom: 25px;
-    grid-area: logoFooter;
-}
-
-
-/*Clases para posicionamiento de los iconos de redes ubicados en el header y en footer*/
-.iconosRedesHeader{
-    height: 20px;
-    margin: 10px;
-
-    /*
-    position: relative;
-    top: -20px; left: 1100px;  */ 
-} 
-
-.iconosRedesHeader:hover{
-    transform: scale(1.5);
-    transition: 0.5s;
-}
-
-
-.contenedorIconosRedesFooter {    
-    grid-area: iconosRedesFooter;
-    /*
-    position: relative;
-    top: 5px; left: 800px; bottom: 200px; */
-}
-
-.iconosRedesFooter{
-    height: 20px;
-    margin: 10px;
-    
-}
-
-
-.iconosRedesFooter:hover{
-    transform: scale(1.5);
-    transition: 0.5s;
-}
-
-/*MEDIA QUERIES MOBILE PARA EL HEADER*/
-
-@media only screen and (max-width:600px){
-    header{
-        display: grid;
-        grid-template-areas: "logo"
-                             "nav";
-        justify-content: center;
-    }
-
-    .contenedorIconosHeader{
-        display: none;
-    }
-}
-
-/*HTML NOSOTROS GRIDS*/
-
-.contenedorMainNosotros{
-    /*display: flex;
-    flex-direction: column;*/
-    
-    display: grid;
-    grid-template-areas: "titulo1 titulo1 titulo1 titulo1"
-                         "parrafo1 parrafo1 parrafo1 parrafo1"
-                         "imagen1 imagen2 imagen3 imagen4"
-                         "titulo2 titulo2 titulo2 titulo2"
-                         "parrafo2 parrafo2 parrafo2 parrafo2";
-}
-
-.titulo1Nosotros{
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    color: blanchedalmond;
-    grid-area: titulo1;
-}
-
-.parrafo1Nosotros{
-    text-align: center;
-    margin-bottom: 4rem;
-    color: blanchedalmond;
-    grid-area: parrafo1;
-}
-
-.imagen1Nosotros{
-    grid-area: imagen1;
-}
-
-.imagen2Nosotros{
-    grid-area: imagen2;
-}
-
-.imagen3Nosotros{
-    grid-area: imagen3;
-}
-
-.imagen4Nosotros{
-    grid-area: imagen4;
-}
-
-.titulo2Nosotros{
-    grid-area: titulo2;
-}
-
-.parrafo2Nosotros{
-    text-align: center;
-    margin-bottom: 4rem;
-    color: blanchedalmond;
-    grid-area: parrafo2;
-}
-
-.posicionArticleNosotros{
-    text-align: center;
-    color: blanchedalmond;
-}
-
-/*MEDIA QUERIE MOBILE HTML NOSOTROS*/
-
-@media only screen and (max-width:600px){
-    .contenedorMainNosotros{
-        display: grid;
-        grid-template-areas: "titulo1"
-                             "parrafo1"
-                             "imagen1"
-                             "imagen2"
-                             "imagen3"
-                             "imagen4"
-                             "titulo2"
-                             "parrafo2";
-    
-    }
-    .imagen1Nosotros{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .imagen2Nosotros{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .imagen3Nosotros{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .imagen4Nosotros{
-        display: flex;
-        justify-content: center;
-    }
-
-}
-
-
-
-
-/*HTML SERVICIOS GRIDS*/
-
-.contenedorMainServicios{
-    display: grid;
-    grid-template-areas: "titulo1Servicios titulo1Servicios titulo1Servicios"
-                         "section1Servicios img1Servicios img1Servicios"
-                         "img2Servicios img2Servicios section2Servicios"
-                         "section3Servicios img3Servicios img3Servicios"
-                         "titulo2Servicios titulo2Servicios titulo2Servicios "
-                         "sectionAlCapone sectionTonyMontana sectionDonCorleone";
-}
-
-.titulo1Servicios{
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-    color: blanchedalmond;
-    grid-area: titulo1Servicios;
-}
-
-.section1Servicios{
-    grid-area: section1Servicios;
-    
-}
-
-.img1Servicios{
-    grid-area: img1Servicios;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5rem;
-}
-
-.img2Servicios{
-    grid-area: img2Servicios;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5rem;
-}
-
-.section2Servicios{
-    grid-area: section2Servicios;
-}
-
-.section3Servicios{
-    grid-area: section3Servicios;
-}
-
-.img3Servicios{
-    grid-area: img3Servicios;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.titulo2Servicios{
-    grid-area: titulo2Servicios;
-}
-
-.sectionAlCapone{
-    grid-area: sectionAlCapone;
-}
-.sectionTonyMontana{
-    grid-area: sectionTonyMontana;
-}
-.sectionDonCorleone{
-    grid-area: sectionDonCorleone;
-    margin-bottom: 3rem;
-}
-
-
-
-/*MEDIA QUERIE MOBILE HTML SERVICIOS*/
-
-@media only screen and (max-width:600px){
-    .contenedorMainServicios{
-        display: grid;
-        grid-template-areas: "titulo1Servicios"
-                             "img1Servicios "
-                             "section1Servicios "
-                             "img2Servicios"
-                             "section2Servicios"
-                             "img3Servicios"
-                             "section3Servicios"
-                             "titulo2Servicios"
-                             "sectionAlCapone "
-                             "sectionTonyMontana"
-                             "sectionDonCorleone";
-    }
-    .img1Servicios{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 0rem;
-    }
-    .section1Servicios{
-        margin-bottom: 4rem;
-    }
-    .img2Servicios{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 0rem;
-    }
-    .section2Servicios{
-        margin-bottom: 4rem;
-    }
-    .img3Servicios{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 0rem;
-    }
-    .section1Servicios{
-        margin-bottom: 4rem;
-    }
-
-}
-
-
-/*HTML MULTIMEDIA GRIDS*/
-
-.contenedorMainMultimedia{
-    justify-content: space-around;
-    display: grid;
-    grid-template-areas: "titulo1Multimedia videoMultimedia videoMultimedia"
-                         "titulo2Multimedia titulo2Multimedia titulo2Multimedia"
-                         "img1Multimedia img2Multimedia img3Multimedia"
-                         "img4Multimedia img5Multimedia img6Multimedia";
-}
-
-.titulo1Multimedia{
-    color: blanchedalmond;
-    text-align: center;
-    margin-top: 17rem;
-    margin-left: 8rem;
-    grid-area: titulo1Multimedia;
-}
-.videoMultimedia{
-    margin-top: 4rem;
-    grid-area: videoMultimedia;
-}
-.titulo2Multimedia{
-    grid-area: titulo2Multimedia;
-}
-.img1Multimedia{
-    
-    grid-area: img1Multimedia;
-}
-.img2Multimedia{
-    grid-area: img2Multimedia;
-}
-.img3Multimedia{
-    grid-area: img3Multimedia;
-}
-.img4Multimedia{
-    grid-area: img4Multimedia;
-}
-.img5Multimedia{
-    grid-area: img5Multimedia;
-}
-.img6Multimedia{
-    grid-area: img6Multimedia;
-}
-
-/*MEDIA QUERIE MOBILE HTML MULTIMEDIA*/
-
-@media only screen and (max-width:600px){
-    .contenedorMainMultimedia{
-        display: grid;
-        grid-template-areas: "titulo1Multimedia"
-                             "videoMultimedia"
-                             "titulo2Multimedia"
-                             "img1Multimedia"
-                             "img2Multimedia"
-                             "img3Multimedia"
-                             "img4Multimedia"
-                             "img5Multimedia"
-                             "img6Multimedia";
-        
-        justify-content: center;
-    }
-
-    .titulo1Multimedia{
-        color: blanchedalmond;
-        text-align: center;
-        margin-top: 5rem;
-        text-align: center;
-    }
-        
-
-    .img1Multimedia{
-        display: flex;    
-        justify-content: center;
-    }
-    .img2Multimedia{
-        display: flex;    
-        justify-content: center;
-    }
-    .img3Multimedia{
-        display: flex;    
-        justify-content: center;
-    }
-    .img4Multimedia{
-        display: flex;    
-        justify-content: center;
-    }
-    .img5Multimedia{
-        display: flex;    
-        justify-content: center;
-    }
-    .img6Multimedia{
-        display: flex;    
-        justify-content: center;
-    }
-}
-
-
-
-/*Estilo del main*/
-main {
-    background-color: rgb(32, 32, 32);
-    }
-
-
-
-
-
-/*Clases para Ubicacion de los logos en el header y en el footer*/
-/*
-.logoHeader {
-    color: rgb(238 232 170);
-    text-align: center;
-    padding-right: 100px;
-}*/
-
-
-
-/*Clase para los textos de color blanco*/
-.textoBlanco {
-    color: white;    
-}
-
-/*Estilo y posicionamiento para texto de Derechos*/
-.textoDerechos {
+    grid-area: logoFooter; }
+  footer .textoDerechos {
     text-align: right;
     color: blanchedalmond;
-    grid-area: derechos;
-}
+    grid-area: derechos; }
+  footer .contenedorIconosRedesFooter {
+    grid-area: iconosRedesFooter; }
 
+/*TAMAÑOS Y TRANSFORMACIONES DE ICONOS DE REDES PARA HEADER Y FOOTER*/
+.iconosRedesHeader {
+  height: 1.4rem;
+  margin: 0.5rem;
+  transition: 0.5s; }
+  .iconosRedesHeader:hover {
+    transform: scale(1.2); }
 
-/*para centrar los titulos*/
-.tituloCentrado {
+.iconosRedesFooter {
+  height: 1.4rem;
+  margin: 0.5rem;
+  transition: 0.5s; }
+  .iconosRedesFooter:hover {
+    transform: scale(1.2); }
+
+/*GRID AREAS HTML NOSOTROS*/
+.contenedorMainNosotros {
+  background-color: #202020;
+  display: grid;
+  grid-template-areas: "titulo1 titulo1 titulo1 titulo1" "parrafo1 parrafo1 parrafo1 parrafo1" "imagen1 imagen2 imagen3 imagen4" "titulo2 titulo2 titulo2 titulo2" "parrafo2 parrafo2 parrafo2 parrafo2"; }
+  .contenedorMainNosotros .titulo1Nosotros {
     text-align: center;
     margin-top: 5rem;
     margin-bottom: 2rem;
     color: blanchedalmond;
-}
-
-/*para centrar los textos*/
-.textoCentrado {
+    grid-area: titulo1; }
+  .contenedorMainNosotros .parrafo1Nosotros {
     text-align: center;
-    padding: 5px;
+    margin-bottom: 4rem;
     color: blanchedalmond;
-}
-
-
-article {
-    padding: 1rem;
-    margin: 1rem;
-}
-
-
-/*posicionamiento de las imagenes en el html Nosotros*/
-.imagenesNosotros {
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-
-/*para los titulos alineados a la izquierda*/
-.tituloIzquierda {
-    text-align: left;
-    padding: 20px;
+    grid-area: parrafo1; }
+  .contenedorMainNosotros .imagen1Nosotros {
+    grid-area: imagen1; }
+    .contenedorMainNosotros .imagen1Nosotros img {
+      margin-top: 30px;
+      margin-bottom: 15px; }
+    .contenedorMainNosotros .imagen1Nosotros h4 {
+      text-align: center;
+      color: blanchedalmond; }
+    .contenedorMainNosotros .imagen1Nosotros p {
+      text-align: center;
+      padding: 5px;
+      color: blanchedalmond; }
+  .contenedorMainNosotros .imagen2Nosotros {
+    grid-area: imagen2; }
+    .contenedorMainNosotros .imagen2Nosotros img {
+      margin-top: 30px;
+      margin-bottom: 15px; }
+    .contenedorMainNosotros .imagen2Nosotros h4 {
+      text-align: center;
+      color: blanchedalmond; }
+    .contenedorMainNosotros .imagen2Nosotros p {
+      text-align: center;
+      padding: 5px;
+      color: blanchedalmond; }
+  .contenedorMainNosotros .imagen3Nosotros {
+    grid-area: imagen3; }
+    .contenedorMainNosotros .imagen3Nosotros img {
+      margin-top: 30px;
+      margin-bottom: 15px; }
+    .contenedorMainNosotros .imagen3Nosotros h4 {
+      text-align: center;
+      color: blanchedalmond; }
+    .contenedorMainNosotros .imagen3Nosotros p {
+      text-align: center;
+      padding: 5px;
+      color: blanchedalmond; }
+  .contenedorMainNosotros .imagen4Nosotros {
+    grid-area: imagen4; }
+    .contenedorMainNosotros .imagen4Nosotros img {
+      margin-top: 30px;
+      margin-bottom: 15px; }
+    .contenedorMainNosotros .imagen4Nosotros h4 {
+      text-align: center;
+      color: blanchedalmond; }
+    .contenedorMainNosotros .imagen4Nosotros p {
+      text-align: center;
+      padding: 5px;
+      color: blanchedalmond; }
+  .contenedorMainNosotros .titulo2Nosotros {
+    grid-area: titulo2;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    color: blanchedalmond; }
+  .contenedorMainNosotros .parrafo2Nosotros {
+    text-align: center;
+    margin-bottom: 4rem;
     color: blanchedalmond;
-}
+    grid-area: parrafo2; }
 
-/*class para los items del formulario*/
-.itemsFormulario {
-    text-align: left;
-    margin: 10px;
-    color: blanchedalmond;
-    padding: 5px;
-}
-
-.itemsFormulario1 {
-    text-align: left;
-    margin: 10px;
-    padding: 5px;
-    
-}
-
+/*MEDIA QUERIE MOBILE HTML NOSOTROS*/
+@media only screen and (max-width: 600px) {
+  .contenedorMainNosotros {
+    display: grid;
+    grid-template-areas: "titulo1" "parrafo1" "imagen1" "imagen2" "imagen3" "imagen4" "titulo2" "parrafo2"; }
+  .imagen1Nosotros {
+    display: flex;
+    justify-content: center; }
+  .imagen2Nosotros {
+    display: flex;
+    justify-content: center; }
+  .imagen3Nosotros {
+    display: flex;
+    justify-content: center; }
+  .imagen4Nosotros {
+    display: flex;
+    justify-content: center; } }
