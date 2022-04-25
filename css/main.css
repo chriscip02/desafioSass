@@ -1,81 +1,4 @@
 @charset "UTF-8";
-/*RESET*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-/*HEADER (PARA TODOS LOS HTML EL MISMO)*/
-header {
-  background-color: #292828;
-  padding: 20px;
-  border: solid #202020;
-  position: sticky;
-  top: 0px;
-  height: 7rem;
-  display: grid;
-  grid-template-areas: "logo nav iconosHeader";
-  grid-template-columns: 1fr 3fr 1fr; }
-  header .contenedorLogo {
-    color: blanchedalmond;
-    grid-area: logo; }
-  header .contenedorIconosHeader {
-    grid-area: iconosHeader; }
-  header .contenedorNav {
-    margin: 10px;
-    grid-area: nav;
-    display: flex;
-    align-items: center; }
-  header .contenedorMenu {
-    display: flex; }
-  header li {
-    margin: 0.5rem;
-    list-style: none;
-    transition: 0.5s; }
-    header li:hover {
-      transform: scale(1.2); }
-  header a {
-    color: blanchedalmond;
-    text-decoration: none; }
-    header a:hover {
-      text-decoration: none;
-      color: whitesmoke; }
-
-/*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
-footer {
-  background-color: #292828;
-  padding: 20px;
-  border: solid #202020;
-  height: 7rem;
-  display: grid;
-  grid-template-areas: "iconosRedesFooter logoFooter" "derechos derechos"; }
-  footer .logoFooter {
-    color: blanchedalmond;
-    text-align: right;
-    padding-bottom: 25px;
-    grid-area: logoFooter; }
-  footer .textoDerechos {
-    text-align: right;
-    color: blanchedalmond;
-    grid-area: derechos; }
-  footer .contenedorIconosRedesFooter {
-    grid-area: iconosRedesFooter; }
-
-/*TAMAÑOS Y TRANSFORMACIONES DE ICONOS DE REDES PARA HEADER Y FOOTER*/
-.iconosRedesHeader {
-  height: 1.4rem;
-  margin: 0.5rem;
-  transition: 0.5s; }
-  .iconosRedesHeader:hover {
-    transform: scale(1.2); }
-
-.iconosRedesFooter {
-  height: 1.4rem;
-  margin: 0.5rem;
-  transition: 0.5s; }
-  .iconosRedesFooter:hover {
-    transform: scale(1.2); }
-
 /*GRID AREAS HTML NOSOTROS*/
 .contenedorMainNosotros {
   background-color: #202020;
@@ -169,3 +92,80 @@ footer {
   .imagen4Nosotros {
     display: flex;
     justify-content: center; } }
+
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*HEADER (PARA TODOS LOS HTML EL MISMO)*/
+header {
+  background-color: #292828;
+  padding: 20px;
+  border: solid #202020;
+  position: sticky;
+  top: 0px;
+  height: 7rem;
+  display: grid;
+  grid-template-areas: "logo nav iconosHeader";
+  grid-template-columns: 1fr 3fr 1fr; }
+  header .contenedorLogo {
+    color: blanchedalmond;
+    grid-area: logo; }
+  header .contenedorIconosHeader {
+    grid-area: iconosHeader; }
+  header .contenedorNav {
+    margin: 10px;
+    grid-area: nav;
+    display: flex;
+    align-items: center; }
+  header .contenedorMenu {
+    display: flex; }
+  header li {
+    margin: 0.5rem;
+    list-style: none;
+    transition: 0.5s; }
+    header li:hover {
+      transform: scale(1.2); }
+  header a {
+    color: blanchedalmond;
+    text-decoration: none; }
+    header a:hover {
+      text-decoration: none;
+      color: whitesmoke; }
+
+/*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
+footer {
+  background-color: #292828;
+  padding: 20px;
+  border: solid #202020;
+  height: 7rem;
+  display: grid;
+  grid-template-areas: "iconosRedesFooter logoFooter" "derechos derechos"; }
+  footer .logoFooter {
+    color: blanchedalmond;
+    text-align: right;
+    padding-bottom: 25px;
+    grid-area: logoFooter; }
+  footer .textoDerechos {
+    text-align: right;
+    color: blanchedalmond;
+    grid-area: derechos; }
+  footer .contenedorIconosRedesFooter {
+    grid-area: iconosRedesFooter; }
+
+/*TAMAÑOS Y TRANSFORMACIONES DE ICONOS DE REDES PARA HEADER Y FOOTER*/
+.iconosRedesHeader {
+  height: 1.4rem;
+  margin: 0.5rem;
+  transition: 0.5s; }
+  .iconosRedesHeader:hover {
+    transform: scale(1.2); }
+
+.iconosRedesFooter {
+  height: 1.4rem;
+  margin: 0.5rem;
+  transition: 0.5s; }
+  .iconosRedesFooter:hover {
+    transform: scale(1.2); }

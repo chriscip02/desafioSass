@@ -1,0 +1,151 @@
+/*GRID AREAS HTML NOSOTROS*/
+
+.contenedorMainNosotros{
+    background-color: $colorPrincipalMain;
+    display: grid;
+    grid-template-areas: "titulo1 titulo1 titulo1 titulo1"
+                         "parrafo1 parrafo1 parrafo1 parrafo1"
+                         "imagen1 imagen2 imagen3 imagen4"
+                         "titulo2 titulo2 titulo2 titulo2"
+                         "parrafo2 parrafo2 parrafo2 parrafo2";
+    
+        .titulo1Nosotros{
+            text-align: center;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            color: blanchedalmond;
+            grid-area: titulo1;
+        }
+
+        .parrafo1Nosotros{
+            text-align: center;
+            margin-bottom: 4rem;
+            color: blanchedalmond;
+            grid-area: parrafo1;
+        }
+        .imagen1Nosotros{
+            grid-area: imagen1;
+            
+            img{
+                margin-top: 30px;
+                margin-bottom: 15px;
+            
+            }
+            h4{
+                text-align: center;
+                color: blanchedalmond;
+            }
+            p{
+                text-align: center;
+                padding: 5px;
+                color: blanchedalmond;
+            }
+            
+        }
+        .imagen2Nosotros{
+            grid-area: imagen2;
+            img{
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+            h4{
+                text-align: center;
+                color: blanchedalmond;
+            }
+            p{
+                text-align: center;
+                padding: 5px;
+                color: blanchedalmond;
+            }
+            
+        }
+        
+        .imagen3Nosotros{
+            grid-area: imagen3;
+            img{
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+            h4{
+                text-align: center;
+                color: blanchedalmond;
+            }
+            p{
+                text-align: center;
+                padding: 5px;
+                color: blanchedalmond;
+            }
+            
+        }
+        
+        .imagen4Nosotros{
+            grid-area: imagen4;
+            img{
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+            h4{
+                text-align: center;
+                color: blanchedalmond;
+            }
+            p{
+                text-align: center;
+                padding: 5px;
+                color: blanchedalmond;
+            }
+            
+        }
+        
+        .titulo2Nosotros{
+            grid-area: titulo2;
+            text-align: center;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            color: blanchedalmond;
+        }
+        
+        .parrafo2Nosotros{
+            text-align: center;
+            margin-bottom: 4rem;
+            color: blanchedalmond;
+            grid-area: parrafo2;
+        }
+
+}
+
+/*MEDIA QUERIE MOBILE HTML NOSOTROS*/
+
+@media only screen and (max-width:600px){
+    .contenedorMainNosotros{
+        display: grid;
+        grid-template-areas: "titulo1"
+                             "parrafo1"
+                             "imagen1"
+                             "imagen2"
+                             "imagen3"
+                             "imagen4"
+                             "titulo2"
+                             "parrafo2";
+    
+    }      
+        .imagen1Nosotros{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .imagen2Nosotros{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .imagen3Nosotros{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .imagen4Nosotros{
+            display: flex;
+            justify-content: center;
+        }
+
+}
