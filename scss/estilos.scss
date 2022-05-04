@@ -9,6 +9,31 @@ $backgroundHeaderAndFooter: rgb(41,40,40);
 
 @import "utilities/nosotros";
 
+/*EXTEND PARA HEADER Y FOOTER*/
+
+%estiloIconosRedes {
+    height: 1.4rem;
+    margin: 0.5rem;
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.2);
+    }    
+}
+
+/*MIXIN*/
+
+@mixin gridPadding {
+    display: grid;
+    padding: 20px;
+    
+}
+
+
+/*MAPAS*/
+$colorMasAlineacion: (
+    color: blanchedalmond,
+    text-align: right,
+);
 
 
 
@@ -24,16 +49,15 @@ $backgroundHeaderAndFooter: rgb(41,40,40);
 
 header{
     background-color: $backgroundHeaderAndFooter;
-    padding: 20px;
+    @include gridPadding;    
     border: solid rgb(32, 32, 32);
     position: sticky;
     top: 0px;
-    height: 7rem;
-    display: grid;
+    height: 7rem;    
     grid-template-areas: "logo nav iconosHeader";
     grid-template-columns: 1fr 3fr 1fr;
     .contenedorLogo{
-        color: blanchedalmond;        
+        color: map-get($map: $colorMasAlineacion, $key:color );
         grid-area: logo;
     }
     .contenedorIconosHeader{
@@ -77,11 +101,10 @@ header{
 /*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
 
 footer{
-    background-color: $backgroundHeaderAndFooter;
-    padding: 20px; 
+    @include gridPadding;  
+    background-color: $backgroundHeaderAndFooter;    
     border: solid rgb(32, 32, 32);
-    height: 7rem;
-    display: grid;
+    height: 7rem;  
     grid-template-areas:  "iconosRedesFooter logoFooter"
                           "derechos derechos" ;
     .logoFooter{
@@ -103,22 +126,11 @@ footer{
 /*TAMAÑOS Y TRANSFORMACIONES DE ICONOS DE REDES PARA HEADER Y FOOTER*/
 
 .iconosRedesHeader{
-    height: 1.4rem;
-    margin: 0.5rem;
-    transition: 0.5s;
-    &:hover{
-        transform: scale(1.2);
-    }
+    @extend %estiloIconosRedes;    
 }
 
 .iconosRedesFooter{
-    height: 1.4rem;
-    margin: 0.5rem;
-    transition: 0.5s;
-    &:hover{
-        transform: scale(1.2);
-    }
-    
+    @extend %estiloIconosRedes;  
 }
 
 

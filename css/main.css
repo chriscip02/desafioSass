@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*MIXIN HTML NOSOTROS*/
 /*GRID AREAS HTML NOSOTROS*/
 .contenedorMainNosotros {
   background-color: #202020;
@@ -6,14 +7,14 @@
   grid-template-areas: "titulo1 titulo1 titulo1 titulo1" "parrafo1 parrafo1 parrafo1 parrafo1" "imagen1 imagen2 imagen3 imagen4" "titulo2 titulo2 titulo2 titulo2" "parrafo2 parrafo2 parrafo2 parrafo2"; }
   .contenedorMainNosotros .titulo1Nosotros {
     text-align: center;
+    color: blanchedalmond;
     margin-top: 5rem;
     margin-bottom: 2rem;
-    color: blanchedalmond;
     grid-area: titulo1; }
   .contenedorMainNosotros .parrafo1Nosotros {
     text-align: center;
-    margin-bottom: 4rem;
     color: blanchedalmond;
+    margin-bottom: 4rem;
     grid-area: parrafo1; }
   .contenedorMainNosotros .imagen1Nosotros {
     grid-area: imagen1; }
@@ -25,8 +26,8 @@
       color: blanchedalmond; }
     .contenedorMainNosotros .imagen1Nosotros p {
       text-align: center;
-      padding: 5px;
-      color: blanchedalmond; }
+      color: blanchedalmond;
+      padding: 5px; }
   .contenedorMainNosotros .imagen2Nosotros {
     grid-area: imagen2; }
     .contenedorMainNosotros .imagen2Nosotros img {
@@ -37,8 +38,8 @@
       color: blanchedalmond; }
     .contenedorMainNosotros .imagen2Nosotros p {
       text-align: center;
-      padding: 5px;
-      color: blanchedalmond; }
+      color: blanchedalmond;
+      padding: 5px; }
   .contenedorMainNosotros .imagen3Nosotros {
     grid-area: imagen3; }
     .contenedorMainNosotros .imagen3Nosotros img {
@@ -49,8 +50,8 @@
       color: blanchedalmond; }
     .contenedorMainNosotros .imagen3Nosotros p {
       text-align: center;
-      padding: 5px;
-      color: blanchedalmond; }
+      color: blanchedalmond;
+      padding: 5px; }
   .contenedorMainNosotros .imagen4Nosotros {
     grid-area: imagen4; }
     .contenedorMainNosotros .imagen4Nosotros img {
@@ -61,18 +62,18 @@
       color: blanchedalmond; }
     .contenedorMainNosotros .imagen4Nosotros p {
       text-align: center;
-      padding: 5px;
-      color: blanchedalmond; }
+      color: blanchedalmond;
+      padding: 5px; }
   .contenedorMainNosotros .titulo2Nosotros {
-    grid-area: titulo2;
     text-align: center;
+    color: blanchedalmond;
+    grid-area: titulo2;
     margin-top: 5rem;
-    margin-bottom: 2rem;
-    color: blanchedalmond; }
+    margin-bottom: 2rem; }
   .contenedorMainNosotros .parrafo2Nosotros {
     text-align: center;
-    margin-bottom: 4rem;
     color: blanchedalmond;
+    margin-bottom: 4rem;
     grid-area: parrafo2; }
 
 /*MEDIA QUERIE MOBILE HTML NOSOTROS*/
@@ -93,6 +94,16 @@
     display: flex;
     justify-content: center; } }
 
+/*EXTEND PARA HEADER Y FOOTER*/
+.iconosRedesHeader, .iconosRedesFooter {
+  height: 1.4rem;
+  margin: 0.5rem;
+  transition: 0.5s; }
+  .iconosRedesHeader:hover, .iconosRedesFooter:hover {
+    transform: scale(1.2); }
+
+/*MIXIN*/
+/*MAPAS*/
 /*RESET*/
 * {
   margin: 0;
@@ -102,12 +113,12 @@
 /*HEADER (PARA TODOS LOS HTML EL MISMO)*/
 header {
   background-color: #292828;
+  display: grid;
   padding: 20px;
   border: solid #202020;
   position: sticky;
   top: 0px;
   height: 7rem;
-  display: grid;
   grid-template-areas: "logo nav iconosHeader";
   grid-template-columns: 1fr 3fr 1fr; }
   header .contenedorLogo {
@@ -137,11 +148,11 @@ header {
 
 /*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
 footer {
-  background-color: #292828;
+  display: grid;
   padding: 20px;
+  background-color: #292828;
   border: solid #202020;
   height: 7rem;
-  display: grid;
   grid-template-areas: "iconosRedesFooter logoFooter" "derechos derechos"; }
   footer .logoFooter {
     color: blanchedalmond;
@@ -156,16 +167,3 @@ footer {
     grid-area: iconosRedesFooter; }
 
 /*TAMAÑOS Y TRANSFORMACIONES DE ICONOS DE REDES PARA HEADER Y FOOTER*/
-.iconosRedesHeader {
-  height: 1.4rem;
-  margin: 0.5rem;
-  transition: 0.5s; }
-  .iconosRedesHeader:hover {
-    transform: scale(1.2); }
-
-.iconosRedesFooter {
-  height: 1.4rem;
-  margin: 0.5rem;
-  transition: 0.5s; }
-  .iconosRedesFooter:hover {
-    transform: scale(1.2); }
