@@ -1,0 +1,109 @@
+/*HTML SERVICIOS GRIDS*/
+
+.contenedorMainServicios{
+    background-color: $colorPrincipalMain;
+    display: grid;
+    grid-template-areas: "titulo1Servicios titulo1Servicios titulo1Servicios"
+                         "section1Servicios img1Servicios img1Servicios"
+                         "img2Servicios img2Servicios section2Servicios"
+                         "section3Servicios img3Servicios img3Servicios"
+                         "titulo2Servicios titulo2Servicios titulo2Servicios "
+                         "sectionAlCapone sectionTonyMontana sectionDonCorleone";
+
+        .titulo1Servicios{
+            text-align: center;
+            margin-top: 5rem;
+            margin-bottom: 4rem;
+            color: blanchedalmond;
+            grid-area: titulo1Servicios;
+        }
+        .section1Servicios{
+            grid-area: section1Servicios;                            
+        }
+        .img1Servicios{
+            grid-area: img1Servicios;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }                        
+        .section2Servicios{
+            grid-area: section2Servicios;
+        }                        
+        .img2Servicios{
+            grid-area: img2Servicios;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }             
+        .section3Servicios{
+            grid-area: section3Servicios;
+        }                        
+        .img3Servicios{
+            grid-area: img3Servicios;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }                        
+        .titulo2Servicios{
+            margin-top: 5rem;
+            margin-bottom: 4rem;
+            color: blanchedalmond;
+            text-align: center;
+            grid-area: titulo2Servicios;
+        }                        
+        .sectionAlCapone{
+            grid-area: sectionAlCapone;
+        }
+        .sectionTonyMontana{
+            grid-area: sectionTonyMontana;
+        }
+        .sectionDonCorleone{
+            grid-area: sectionDonCorleone;
+            margin-bottom: 3rem;
+        }
+                        
+}
+
+/*MEDIA QUERIE MOBILE HTML SERVICIOS*/
+
+@media only screen and (max-width:600px){
+    .contenedorMainServicios{
+        display: grid;
+        grid-template-areas: "titulo1Servicios"
+                             "img1Servicios "
+                             "section1Servicios "
+                             "img2Servicios"
+                             "section2Servicios"
+                             "img3Servicios"
+                             "section3Servicios"
+                             "titulo2Servicios"
+                             "sectionAlCapone "
+                             "sectionTonyMontana"
+                             "sectionDonCorleone";
+    }
+        .img1Servicios{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0rem;
+        }
+        .section1Servicios{
+            margin-bottom: 4rem;
+        }
+        .img2Servicios{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0rem;
+        }
+        .section2Servicios{
+            margin-bottom: 4rem;
+        }
+        .img3Servicios{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0rem;
+        }
+        .section1Servicios{
+            margin-bottom: 4rem;
+        }
+
+}

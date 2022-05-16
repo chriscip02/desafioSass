@@ -8,6 +8,9 @@ $backgroundHeaderAndFooter: rgb(41,40,40);
 //IMPORT
 
 @import "utilities/nosotros";
+@import "utilities/servicios";
+@import "utilities/multimedia";
+@import "utilities/reservas";
 
 /*EXTEND PARA HEADER Y FOOTER*/
 
@@ -97,6 +100,22 @@ header{
                 
 }
 
+/*MEDIA QUERIES MOBILE PARA EL HEADER*/
+
+@media only screen and (max-width:600px){
+    header{
+        display: grid;
+        grid-template-areas: "logo"
+                             "nav";
+        justify-content: center;
+    }
+
+        .contenedorIconosHeader{
+            display: none;
+        }
+}
+
+
 
 /*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
 
@@ -131,6 +150,64 @@ footer{
 
 .iconosRedesFooter{
     @extend %estiloIconosRedes;  
+}
+
+
+/*Estilo del main*/
+main {
+    background-color: rgb(32, 32, 32);
+    }
+
+
+
+
+/*Clase para los textos de color blanco*/
+.textoBlanco {
+    color: white;    
+}
+
+/*Estilo y posicionamiento para texto de Derechos*/
+.textoDerechos {
+    text-align: right;
+    color: blanchedalmond;
+    grid-area: derechos;
+}
+
+
+/*para centrar los titulos*/
+.tituloCentrado {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    color: blanchedalmond;
+}
+
+/*para centrar los textos*/
+.textoCentrado {
+    text-align: center;
+    padding: 5px;
+    color: blanchedalmond;
+}
+
+
+article {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+
+/*posicionamiento de las imagenes en el html Nosotros*/
+.imagenesNosotros {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+/*para los titulos alineados a la izquierda*/
+.tituloIzquierda {
+    text-align: left;
+    padding: 20px;
+    color: blanchedalmond;
 }
 
 

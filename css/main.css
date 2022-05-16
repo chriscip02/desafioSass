@@ -94,6 +94,147 @@
     display: flex;
     justify-content: center; } }
 
+/*HTML SERVICIOS GRIDS*/
+.contenedorMainServicios {
+  background-color: #202020;
+  display: grid;
+  grid-template-areas: "titulo1Servicios titulo1Servicios titulo1Servicios" "section1Servicios img1Servicios img1Servicios" "img2Servicios img2Servicios section2Servicios" "section3Servicios img3Servicios img3Servicios" "titulo2Servicios titulo2Servicios titulo2Servicios " "sectionAlCapone sectionTonyMontana sectionDonCorleone"; }
+  .contenedorMainServicios .titulo1Servicios {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    color: blanchedalmond;
+    grid-area: titulo1Servicios; }
+  .contenedorMainServicios .section1Servicios {
+    grid-area: section1Servicios; }
+  .contenedorMainServicios .img1Servicios {
+    grid-area: img1Servicios;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem; }
+  .contenedorMainServicios .section2Servicios {
+    grid-area: section2Servicios; }
+  .contenedorMainServicios .img2Servicios {
+    grid-area: img2Servicios;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem; }
+  .contenedorMainServicios .section3Servicios {
+    grid-area: section3Servicios; }
+  .contenedorMainServicios .img3Servicios {
+    grid-area: img3Servicios;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; }
+  .contenedorMainServicios .titulo2Servicios {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    color: blanchedalmond;
+    text-align: center;
+    grid-area: titulo2Servicios; }
+  .contenedorMainServicios .sectionAlCapone {
+    grid-area: sectionAlCapone; }
+  .contenedorMainServicios .sectionTonyMontana {
+    grid-area: sectionTonyMontana; }
+  .contenedorMainServicios .sectionDonCorleone {
+    grid-area: sectionDonCorleone;
+    margin-bottom: 3rem; }
+
+/*MEDIA QUERIE MOBILE HTML SERVICIOS*/
+@media only screen and (max-width: 600px) {
+  .contenedorMainServicios {
+    display: grid;
+    grid-template-areas: "titulo1Servicios" "img1Servicios " "section1Servicios " "img2Servicios" "section2Servicios" "img3Servicios" "section3Servicios" "titulo2Servicios" "sectionAlCapone " "sectionTonyMontana" "sectionDonCorleone"; }
+  .img1Servicios {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0rem; }
+  .section1Servicios {
+    margin-bottom: 4rem; }
+  .img2Servicios {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0rem; }
+  .section2Servicios {
+    margin-bottom: 4rem; }
+  .img3Servicios {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0rem; }
+  .section1Servicios {
+    margin-bottom: 4rem; } }
+
+/*HTML MULTIMEDIA GRIDS*/
+.contenedorMainMultimedia {
+  justify-content: space-around;
+  display: grid;
+  grid-template-areas: "titulo1Multimedia videoMultimedia videoMultimedia" "titulo2Multimedia titulo2Multimedia titulo2Multimedia" "img1Multimedia img2Multimedia img3Multimedia" "img4Multimedia img5Multimedia img6Multimedia"; }
+  .contenedorMainMultimedia .titulo1Multimedia {
+    color: blanchedalmond;
+    text-align: center;
+    margin-top: 17rem;
+    margin-left: 8rem;
+    grid-area: titulo1Multimedia; }
+  .contenedorMainMultimedia .videoMultimedia {
+    margin-top: 4rem;
+    grid-area: videoMultimedia; }
+  .contenedorMainMultimedia .titulo2Multimedia {
+    grid-area: titulo2Multimedia; }
+  .contenedorMainMultimedia .img1Multimedia {
+    grid-area: img1Multimedia; }
+  .contenedorMainMultimedia .img2Multimedia {
+    grid-area: img2Multimedia; }
+  .contenedorMainMultimedia .img3Multimedia {
+    grid-area: img3Multimedia; }
+  .contenedorMainMultimedia .img4Multimedia {
+    grid-area: img4Multimedia; }
+  .contenedorMainMultimedia .img5Multimedia {
+    grid-area: img5Multimedia; }
+  .contenedorMainMultimedia .img6Multimedia {
+    grid-area: img6Multimedia; }
+
+/*MEDIA QUERIE MOBILE HTML MULTIMEDIA*/
+@media only screen and (max-width: 600px) {
+  .contenedorMainMultimedia {
+    display: grid;
+    grid-template-areas: "titulo1Multimedia" "videoMultimedia" "titulo2Multimedia" "img1Multimedia" "img2Multimedia" "img3Multimedia" "img4Multimedia" "img5Multimedia" "img6Multimedia";
+    justify-content: center; }
+  .titulo1Multimedia {
+    color: blanchedalmond;
+    text-align: center;
+    margin-top: 5rem;
+    text-align: center; }
+  .img1Multimedia {
+    display: flex;
+    justify-content: center; }
+  .img2Multimedia {
+    display: flex;
+    justify-content: center; }
+  .img3Multimedia {
+    display: flex;
+    justify-content: center; }
+  .img4Multimedia {
+    display: flex;
+    justify-content: center; }
+  .img5Multimedia {
+    display: flex;
+    justify-content: center; }
+  .img6Multimedia {
+    display: flex;
+    justify-content: center; } }
+
+/*class para los items del formulario*/
+.itemsFormulario {
+  text-align: left;
+  margin: 10px;
+  color: blanchedalmond;
+  padding: 5px; }
+
+.itemsFormulario1 {
+  text-align: left;
+  margin: 10px;
+  padding: 5px; }
+
 /*EXTEND PARA HEADER Y FOOTER*/
 .iconosRedesHeader, .iconosRedesFooter {
   height: 1.4rem;
@@ -146,6 +287,15 @@ header {
       text-decoration: none;
       color: whitesmoke; }
 
+/*MEDIA QUERIES MOBILE PARA EL HEADER*/
+@media only screen and (max-width: 600px) {
+  header {
+    display: grid;
+    grid-template-areas: "logo" "nav";
+    justify-content: center; }
+  .contenedorIconosHeader {
+    display: none; } }
+
 /*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
 footer {
   display: grid;
@@ -167,3 +317,44 @@ footer {
     grid-area: iconosRedesFooter; }
 
 /*TAMAÑOS Y TRANSFORMACIONES DE ICONOS DE REDES PARA HEADER Y FOOTER*/
+/*Estilo del main*/
+main {
+  background-color: #202020; }
+
+/*Clase para los textos de color blanco*/
+.textoBlanco {
+  color: white; }
+
+/*Estilo y posicionamiento para texto de Derechos*/
+.textoDerechos {
+  text-align: right;
+  color: blanchedalmond;
+  grid-area: derechos; }
+
+/*para centrar los titulos*/
+.tituloCentrado {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  color: blanchedalmond; }
+
+/*para centrar los textos*/
+.textoCentrado {
+  text-align: center;
+  padding: 5px;
+  color: blanchedalmond; }
+
+article {
+  padding: 1rem;
+  margin: 1rem; }
+
+/*posicionamiento de las imagenes en el html Nosotros*/
+.imagenesNosotros {
+  margin-top: 30px;
+  margin-bottom: 15px; }
+
+/*para los titulos alineados a la izquierda*/
+.tituloIzquierda {
+  text-align: left;
+  padding: 20px;
+  color: blanchedalmond; }

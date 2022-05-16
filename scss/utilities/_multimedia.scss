@@ -1,0 +1,98 @@
+
+/*HTML MULTIMEDIA GRIDS*/
+
+.contenedorMainMultimedia{
+    justify-content: space-around;
+    display: grid;
+    grid-template-areas: "titulo1Multimedia videoMultimedia videoMultimedia"
+                         "titulo2Multimedia titulo2Multimedia titulo2Multimedia"
+                         "img1Multimedia img2Multimedia img3Multimedia"
+                         "img4Multimedia img5Multimedia img6Multimedia";
+
+
+    .titulo1Multimedia{
+        color: blanchedalmond;
+        text-align: center;
+        margin-top: 17rem;
+        margin-left: 8rem;
+        grid-area: titulo1Multimedia;
+    }
+    .videoMultimedia{
+        margin-top: 4rem;
+        grid-area: videoMultimedia;
+    }
+    .titulo2Multimedia{
+        grid-area: titulo2Multimedia;
+    }
+        .img1Multimedia{
+            
+            grid-area: img1Multimedia;
+        }
+        .img2Multimedia{
+            grid-area: img2Multimedia;
+        }
+        .img3Multimedia{
+            grid-area: img3Multimedia;
+        }
+        .img4Multimedia{
+            grid-area: img4Multimedia;
+        }
+        .img5Multimedia{
+            grid-area: img5Multimedia;
+        }
+        .img6Multimedia{
+            grid-area: img6Multimedia;
+        }
+}
+
+/*MEDIA QUERIE MOBILE HTML MULTIMEDIA*/
+
+@media only screen and (max-width:600px){
+    .contenedorMainMultimedia{
+        display: grid;
+        grid-template-areas: "titulo1Multimedia"
+                             "videoMultimedia"
+                             "titulo2Multimedia"
+                             "img1Multimedia"
+                             "img2Multimedia"
+                             "img3Multimedia"
+                             "img4Multimedia"
+                             "img5Multimedia"
+                             "img6Multimedia";
+        
+        justify-content: center;
+    }
+
+        .titulo1Multimedia{
+            color: blanchedalmond;
+            text-align: center;
+            margin-top: 5rem;
+            text-align: center;
+        }
+            
+
+        .img1Multimedia{
+            display: flex;    
+            justify-content: center;
+        }
+        .img2Multimedia{
+            display: flex;    
+            justify-content: center;
+        }
+        .img3Multimedia{
+            display: flex;    
+            justify-content: center;
+        }
+        .img4Multimedia{
+            display: flex;    
+            justify-content: center;
+        }
+        .img5Multimedia{
+            display: flex;    
+            justify-content: center;
+        }
+        .img6Multimedia{
+            display: flex;    
+            justify-content: center;
+        }
+}
