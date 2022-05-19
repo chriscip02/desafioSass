@@ -4,7 +4,7 @@
 .contenedorMainNosotros {
   background-color: #202020;
   display: grid;
-  grid-template-areas: "titulo1 titulo1 titulo1 titulo1" "parrafo1 parrafo1 parrafo1 parrafo1" "imagen1 imagen2 imagen3 imagen4" "titulo2 titulo2 titulo2 titulo2" "parrafo2 parrafo2 parrafo2 parrafo2"; }
+  grid-template-areas: "titulo1 titulo1" "parrafo1 parrafo1" "imagen1 imagen2"  "imagen3 imagen4" "titulo2 titulo2 " "parrafo2 parrafo2"; }
   .contenedorMainNosotros .titulo1Nosotros {
     text-align: center;
     color: blanchedalmond;
@@ -18,9 +18,15 @@
     grid-area: parrafo1; }
   .contenedorMainNosotros .imagen1Nosotros {
     grid-area: imagen1; }
+    .contenedorMainNosotros .imagen1Nosotros article {
+      display: flex;
+      flex-direction: column; }
     .contenedorMainNosotros .imagen1Nosotros img {
+      max-width: fit-content;
+      max-height: fit-content;
       margin-top: 30px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      margin-left: 6rem; }
     .contenedorMainNosotros .imagen1Nosotros h4 {
       text-align: center;
       color: blanchedalmond; }
@@ -30,9 +36,15 @@
       padding: 5px; }
   .contenedorMainNosotros .imagen2Nosotros {
     grid-area: imagen2; }
+    .contenedorMainNosotros .imagen2Nosotros article {
+      display: flex;
+      flex-direction: column; }
     .contenedorMainNosotros .imagen2Nosotros img {
+      max-width: fit-content;
+      max-height: fit-content;
       margin-top: 30px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      margin-left: 6rem; }
     .contenedorMainNosotros .imagen2Nosotros h4 {
       text-align: center;
       color: blanchedalmond; }
@@ -42,9 +54,15 @@
       padding: 5px; }
   .contenedorMainNosotros .imagen3Nosotros {
     grid-area: imagen3; }
+    .contenedorMainNosotros .imagen3Nosotros article {
+      display: flex;
+      flex-direction: column; }
     .contenedorMainNosotros .imagen3Nosotros img {
+      max-width: fit-content;
+      max-height: fit-content;
       margin-top: 30px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      margin-left: 6rem; }
     .contenedorMainNosotros .imagen3Nosotros h4 {
       text-align: center;
       color: blanchedalmond; }
@@ -54,9 +72,15 @@
       padding: 5px; }
   .contenedorMainNosotros .imagen4Nosotros {
     grid-area: imagen4; }
+    .contenedorMainNosotros .imagen4Nosotros article {
+      display: flex;
+      flex-direction: column; }
     .contenedorMainNosotros .imagen4Nosotros img {
+      max-width: fit-content;
+      max-height: fit-content;
       margin-top: 30px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      margin-left: 6rem; }
     .contenedorMainNosotros .imagen4Nosotros h4 {
       text-align: center;
       color: blanchedalmond; }
@@ -302,14 +326,16 @@ footer {
   padding: 20px;
   background-color: #292828;
   border: solid #202020;
-  height: 7rem;
-  grid-template-areas: "iconosRedesFooter logoFooter" "derechos derechos"; }
+  height: 10rem;
+  grid-template-areas: "iconosRedesFooter logoFooter" "derechos derechos";
+  grid-template-columns: 4fr 1fr; }
   footer .logoFooter {
     color: blanchedalmond;
     text-align: right;
     padding-bottom: 25px;
     grid-area: logoFooter; }
   footer .textoDerechos {
+    margin-right: 1rem;
     text-align: right;
     color: blanchedalmond;
     grid-area: derechos; }

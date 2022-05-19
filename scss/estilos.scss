@@ -123,9 +123,10 @@ footer{
     @include gridPadding;  
     background-color: $backgroundHeaderAndFooter;    
     border: solid rgb(32, 32, 32);
-    height: 7rem;  
+    height: 10rem;  
     grid-template-areas:  "iconosRedesFooter logoFooter"
                           "derechos derechos" ;
+    grid-template-columns: 4fr 1fr;
     .logoFooter{
         color: blanchedalmond;
         text-align: right;
@@ -133,6 +134,7 @@ footer{
         grid-area: logoFooter;
     }
     .textoDerechos{
+        margin-right: 1rem;       
         text-align: right;
         color: blanchedalmond;
         grid-area: derechos;
