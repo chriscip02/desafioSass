@@ -15,7 +15,7 @@ $backgroundHeaderAndFooter: rgb(41,40,40);
 /*EXTEND PARA HEADER Y FOOTER*/
 
 %estiloIconosRedes {
-    height: 1.4rem;
+    /*height: 1.4rem;*/
     margin: 0.5rem;
     transition: 0.5s;
     &:hover{
@@ -27,7 +27,7 @@ $backgroundHeaderAndFooter: rgb(41,40,40);
 
 @mixin gridPadding {
     display: grid;
-    padding: 20px;
+    padding: 1.25rem;
     
 }
 
@@ -48,34 +48,46 @@ $colorMasAlineacion: (
     box-sizing: border-box;
 }
 
+
 /*HEADER (PARA TODOS LOS HTML EL MISMO)*/
 
 header{
+    font-family: 'Roboto', sans-serif;
     background-color: $backgroundHeaderAndFooter;
     @include gridPadding;    
     border: solid rgb(32, 32, 32);
     position: sticky;
+    z-index: 1000;
     top: 0px;
     height: 7rem;    
     grid-template-areas: "logo nav iconosHeader";
     grid-template-columns: 1fr 3fr 1fr;
     .contenedorLogo{
+        transition: 0.5s;
+        &:hover{
+            transform: scale(1.1);
+        }           
         color: map-get($map: $colorMasAlineacion, $key:color );
         grid-area: logo;
     }
     .contenedorIconosHeader{
         grid-area: iconosHeader;
+        /*margin-top: 1rem;
+        margin-left: 5.5rem;*/
+       
             
     }
     .contenedorNav{
-        margin: 10px;
         grid-area: nav;
+        margin: 0.62rem;        
         display: flex;
         align-items: center;  
     }
         .contenedorMenu{
-            
+            font-size: 1.1rem;
             display: flex;
+            margin-left: 5rem;
+            margin-top: 1.5rem;
         }        
             li{                
                 margin: 0.5rem;
@@ -102,24 +114,115 @@ header{
 
 /*MEDIA QUERIES MOBILE PARA EL HEADER*/
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:768px){
     header{
-        display: grid;
-        grid-template-areas: "logo"
-                             "nav";
+        height: 20em;        
+        padding: 0px;
+        grid-template-areas: "logo logo nav iconosHeader";
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
     }
 
         .contenedorIconosHeader{
             display: none;
         }
+        .contenedorLogo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                height: 50%;
+                width: 90%;
+                
+                
+            }
+        }
+        .contenedorNav{
+            margin: 0px;
+            
+              
+            .contenedorMenu{
+                display: flex;                
+                flex-direction: column;
+                align-items: center;
+                margin: 0px;            
+                
+                
+                font-size: 1.5em;
+                
+                
+                
+            }
+
+        }
 }
+
+/*MEDIA QUERIES TABLET PARA EL HEADER*/
+
+@media only screen and (min-width: 769px) and (max-width:1024px){
+    header{
+        height: 22em;
+        display: grid;
+        padding: 0px;
+        grid-template-areas: "logo nav iconosHeader";
+        grid-template-columns: 4fr 1fr 1fr;        
+        justify-content: center;
+    }
+
+        
+        
+        .contenedorLogo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                height: 60%;
+                width: 80%;
+                
+                
+            }
+        }
+        .contenedorNav{
+            
+            
+              
+            .contenedorMenu{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px;
+                margin: 0px;
+                
+                
+                
+                
+                
+            }
+
+        }
+        .contenedorIconosHeader{
+           margin-left: 5em;
+           margin-bottom: 3em;
+
+
+      
+            .iconosRedesHeader{
+                display: flex;
+                margin-top: 3em;
+                margin-bottom: 1em;
+                justify-content: center
+            }
+    }
+}
+
+
 
 
 
 /*FOOTER (PARA TODOS LOS HTML EL MISMO)*/
 
 footer{
+    font-family: 'Roboto', sans-serif;
     @include gridPadding;  
     background-color: $backgroundHeaderAndFooter;    
     border: solid rgb(32, 32, 32);
@@ -128,9 +231,11 @@ footer{
                           "derechos derechos" ;
     grid-template-columns: 4fr 1fr;
     .logoFooter{
-        color: blanchedalmond;
-        text-align: right;
-        padding-bottom: 25px;
+        transition: 0.5s;
+        &:hover{
+            transform: scale(1.1);
+        }           
+        color: map-get($map: $colorMasAlineacion, $key:color );
         grid-area: logoFooter;
     }
     .textoDerechos{
@@ -141,8 +246,105 @@ footer{
     }
     .contenedorIconosRedesFooter{
         grid-area: iconosRedesFooter;
+        margin-top: 2rem;
     }
 }
+
+/*MEDIA QUERIES TABLET PARA EL FOOTER*/
+
+@media only screen and (min-width:601px) and (max-width:1024px){
+    footer{
+        padding: 0px;
+        grid-template-areas:  "iconosRedesFooter logoFooter"
+                              "iconosRedesFooter derechos" ;
+        grid-template-columns: 1fr 2fr;
+
+        .logoFooter{
+            margin: auto;        
+            width: 60%;
+             
+            
+         
+        }
+        .contenedorIconosRedesFooter{
+            
+            flex-direction: column;
+            margin-left: 0.5em;
+        }
+        .textoDerechos{
+            text-align: center;
+        }
+    }
+
+}
+
+/*MEDIA QUERIES MOBILE PARA EL FOOTER*/
+
+@media only screen and (max-width:600px){
+    footer{
+        padding: 0px;
+        grid-template-areas:  "iconosRedesFooter logoFooter"
+                              "iconosRedesFooter derechos" ;
+        grid-template-columns: 1fr 2fr;
+        .logoFooter{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                
+                
+                
+            }
+            
+                    
+        }
+        .contenedorIconosRedesFooter{
+            display: flex;
+            flex-direction: column;
+            margin-left: 0.5em;
+            margin: 0px;
+            img{
+                width: 15%;
+            
+            }
+        }
+        .textoDerechos{
+            text-align: center;
+        }
+    }
+
+
+}
+
+
+
+/*MEDIA QUERIES TABLET PARA EL FOOTER
+
+@media only screen and (min-widht:769px) and (max-width:1024px){
+    
+
+    footer{
+        padding: 0px;
+        grid-template-areas:  "iconosRedesFooter logoFooter"
+                              "iconosRedesFooter derechos" ;
+        grid-template-columns: 1fr 2fr;                  
+
+        }
+        .logoFooter{
+            margin: auto;
+            width: 80%;
+        }
+        .contenedorIconosRedesFooter{
+            
+            flex-direction: column;
+            margin-left: 0.5em;
+        }
+    } */
+
+
+
 
 /*TAMAÑOS Y TRANSFORMACIONES DE ICONOS DE REDES PARA HEADER Y FOOTER*/
 
@@ -187,7 +389,7 @@ main {
 /*para centrar los textos*/
 .textoCentrado {
     text-align: center;
-    padding: 5px;
+    padding: 0.31rem;
     color: blanchedalmond;
 }
 
@@ -200,15 +402,15 @@ article {
 
 /*posicionamiento de las imagenes en el html Nosotros*/
 .imagenesNosotros {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 1.87rem;
+    margin-bottom: 0.93rem;
 }
 
 
 /*para los titulos alineados a la izquierda*/
 .tituloIzquierda {
     text-align: left;
-    padding: 20px;
+    padding: 1.25rem;
     color: blanchedalmond;
 }
 

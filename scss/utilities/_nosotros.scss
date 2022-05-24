@@ -8,60 +8,67 @@
 
 
 
+
+
 /*GRID AREAS HTML NOSOTROS*/
 
 .contenedorMainNosotros{
+    font-family: 'Roboto', sans-serif;
     background-color: $colorPrincipalMain;
     display: grid;
-    grid-template-areas: "titulo1 titulo1"
-                         "parrafo1 parrafo1"
-                         "imagen1 imagen2" 
-                         "imagen3 imagen4"
-                         "titulo2 titulo2 "
-                         "parrafo2 parrafo2";
+    grid-template-areas: "titulo1          titulo1"                         
+                         "article1         article2" 
+                         "article3         article4"
+                         "titulo2          titulo2";
     
         .titulo1Nosotros{
-            @include centradoBlanchedalmond;
-            margin-top: 5rem;
-            margin-bottom: 2rem;            
             grid-area: titulo1;
+            text-align: center;
 
-        }
-
-        .parrafo1Nosotros{
-            @include centradoBlanchedalmond;            
-            margin-bottom: 4rem;            
-            grid-area: parrafo1;
-        }
-        .imagen1Nosotros{
-            grid-area: imagen1;
-
-            article{
-                display: flex;
-                flex-direction: column;
+            h1{
+                @include centradoBlanchedalmond;
+                margin-top: 5em;
+                margin-bottom: 2em;      
             }
+            p{
+                @include centradoBlanchedalmond;            
+                margin-bottom: 4em;            
+               
+
+            }      
+        }
+
+    
+        .article1Nosotros{            
+            grid-area: article1;
+            display: flex;
+            flex-direction: column;         
             
             
                 img{
-                    max-width: fit-content;
-                    max-height: fit-content;
-                    margin-top: 30px;
-                    margin-bottom: 15px;
-                    margin-left: 6rem
+                    border: solid 1px grey;                    
+                    margin-top: 1.87em;
+                    margin-bottom: 0.93em;
+                    margin-left: 6em;
+                    transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+                }             
+                    
                 
                 }
-                h4{
+                h2{
                     @include centradoBlanchedalmond;
                 }
                 p{
                     @include centradoBlanchedalmond;                
-                    padding: 5px;
+                    padding: 0.31em;
                     
                 }
             
         }
-        .imagen2Nosotros{
-            grid-area: imagen2;
+        .article2Nosotros{
+            grid-area: article2;
 
             article{
                 display: flex;
@@ -70,24 +77,28 @@
 
 
                 img{
-                    max-width: fit-content;
-                    max-height: fit-content;
-                    margin-top: 30px;
-                    margin-bottom: 15px;
-                    margin-left: 6rem
+                    border: solid 1px grey;
+                   
+                    margin-top: 1.87em;
+                    margin-bottom: 0.93em;
+                    margin-left: 6em;
+                    transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+                }             
                 }
-                h4{
+                h2{
                     @include centradoBlanchedalmond;
                 }
                 p{
                     @include centradoBlanchedalmond;                
-                    padding: 5px;                
+                    padding: 0.31em;                
                 }
             
         }
         
-        .imagen3Nosotros{
-            grid-area: imagen3;
+        .article3Nosotros{
+            grid-area: article3;
 
             article{
                 display: flex;
@@ -96,25 +107,30 @@
             
 
                 img{
-                    max-width: fit-content;
-                    max-height: fit-content;
-                    margin-top: 30px;
-                    margin-bottom: 15px;
-                    margin-left: 6rem
+                    border: solid 1px grey;
+                    
+                    margin-top: 1.87em;
+                    margin-bottom: 0.93em;
+                    margin-left: 6em;
+                    transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+            }      
+                    
                 }
-                h4{
+                h2{
                     @include centradoBlanchedalmond;
                 }
                 p{
                     @include centradoBlanchedalmond;                
-                    padding: 5px;                
+                    padding: 0.31em;                
                 }
             
             
         }
         
-        .imagen4Nosotros{
-            grid-area: imagen4;
+        .article4Nosotros{
+            grid-area: article4;
 
             article{
                 display: flex;
@@ -123,70 +139,264 @@
 
             
                 img{
-                    max-width: fit-content;
-                    max-height: fit-content;
-                    margin-top: 30px;
-                    margin-bottom: 15px;
-                    margin-left: 6rem
+                    border: solid 1px grey;
+                    
+                    margin-top: 1.87em;
+                    margin-bottom: 0.93em;
+                    margin-left: 6em;
+                    transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+            }      
                 }
-                h4{
+                h2{
                     @include centradoBlanchedalmond;
                 }
                 p{
                     @include centradoBlanchedalmond;                
-                    padding: 5px;                
+                    padding: 0.31em;                
                 }
             
         }
         
         .titulo2Nosotros{
-            @include centradoBlanchedalmond;
-            grid-area: titulo2;            
-            margin-top: 5rem;
-            margin-bottom: 2rem;            
+            grid-area: titulo2;
+
+            h3{            
+                @include centradoBlanchedalmond;                        
+                margin-top: 5em;
+                margin-bottom: 2em;
+                font-size: 1.8em;  
+            }
+            p{
+                @include centradoBlanchedalmond;            
+                margin-bottom: 4em;
+                margin-left: 3em;  
+                margin-right: 3em;          
+                
+            }
         }
         
-        .parrafo2Nosotros{
-            @include centradoBlanchedalmond;            
-            margin-bottom: 4rem;            
-            grid-area: parrafo2;
-        }
+        
 
 }
 
 /*MEDIA QUERIE MOBILE HTML NOSOTROS*/
 
 @media only screen and (max-width:600px){
+    body{
+        
+    }
+    header{
+        font-size: 10px;
+    }
     .contenedorMainNosotros{
         display: grid;
-        grid-template-areas: "titulo1"
-                             "parrafo1"
-                             "imagen1"
-                             "imagen2"
-                             "imagen3"
-                             "imagen4"
-                             "titulo2"
-                             "parrafo2";
+        grid-template-areas: "titulo1"                             
+                             "article1"
+                             "article2"
+                             "article3"
+                             "article4"
+                             "titulo2";
     
-    }      
-        .imagen1Nosotros{
-            display: flex;
-            justify-content: center;
+    } 
+        .titulo1Nosotros{
+            text-align: center;
+            
+            
+            margin-left: 2em;          
+        }     
+    
+        .article1Nosotros{    
+            
+           
+            padding-left: 2rem;
+
+            .imagen1{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;
+                    width: 90%;
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto1{
+                text-align: center;             
+            }           
+                
+        
+
+            
+            
+            
         }
         
-        .imagen2Nosotros{
-            display: flex;
-            justify-content: center;
+        .article2Nosotros{
+            
+            padding-left: 2rem;
+
+            .imagen2{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;
+                    width: 90%;
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto2{
+                text-align: center;             
+            }
         }
         
-        .imagen3Nosotros{
-            display: flex;
-            justify-content: center;
+        .article3Nosotros{
+            
+            padding-left: 2rem;
+
+            .imagen3{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;
+                    width: 90%;
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto3{
+                text-align: center;             
+            }
         }
         
-        .imagen4Nosotros{
-            display: flex;
-            justify-content: center;
+        .article4Nosotros{
+            
+            padding-left: 2rem;
+
+            .imagen4{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;
+                    width: 90%;
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto4{                
+                text-align: center;             
+            }
         }
 
 }
+
+/*MEDIA QUERIE TABLET HTML NOSOTROS*/
+
+@media only screen and (min-width:600px) and (max-width:1200px){
+    header{
+        font-size: 0.62em;
+    }
+    .contenedorMainNosotros{
+        display: grid;
+        grid-template-areas: "titulo1"                             
+                             "article1"
+                             "article2"
+                             "article3"
+                             "article4"
+                             "titulo2";
+    
+    } 
+        .titulo1Nosotros{
+            text-align: center;
+            
+            
+            margin-left: 2em;          
+        }     
+    
+        .article1Nosotros{    
+            
+           
+            padding-left: 2rem;
+
+            .imagen1{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;
+                    
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto1{
+                text-align: center;             
+            }           
+                
+        
+
+            
+            
+            
+        }
+        
+        .article2Nosotros{
+            
+            padding-left: 2rem;
+
+            .imagen2{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;
+                    
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto2{
+                text-align: center;             
+            }
+        }
+        
+        .article3Nosotros{
+            
+            padding-left: 2rem;
+
+            .imagen3{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;
+                    
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto3{
+                text-align: center;             
+            }
+        }
+        
+        .article4Nosotros{
+            
+            padding-left: 2rem;
+
+            .imagen4{
+                display: flex;
+                justify-content: center;
+                img{
+                    margin: 0px auto;                   
+                    margin-bottom: 1rem;                   
+                }
+                }
+
+            .texto4{                
+                text-align: center;             
+            }
+        }
+
+
+}
+

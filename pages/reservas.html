@@ -2,6 +2,9 @@
 <html lang="es">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Open+Sans:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,62 +35,67 @@
                 </nav>
             </div>
             <div class="contenedorIconosHeader">
-                <a href="https://www.facebook.com" target="_blank" > <img src="../media/facebook.png" alt="Icono de facebook" class="iconosRedesHeader"></a>
-                <a href="https://www.instagram.com" target="_blank"> <img src="../media/instagram.png" alt="Icono de instagram" class="iconosRedesHeader"></a>
-                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/whatsapp.png" alt="Icono de whatsapp" class="iconosRedesHeader"></a>
+                <a href="https://www.facebook.com" target="_blank" > <img src="../media/2.png" alt="Icono de facebook" class="iconosRedesHeader"></a>
+                <a href="https://www.instagram.com" target="_blank"> <img src="../media/3.png" alt="Icono de instagram" class="iconosRedesHeader"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/1.png" alt="Icono de whatsapp" class="iconosRedesHeader"></a>
             </div>
         </header>
 
         <main class="mainReservas">
-            <h3 class="tituloIzquierda">Hace tu reserva</h3>
-            <form id="formulario">
-                <br>
-                <label class="itemsFormulario" for="nombre">Tu Nombre</label>
-                <input type="text" placeholder="Ingrese su nombre" id="nombre">
-                <br><br>
-                <label class="itemsFormulario" for="nombre">Tu número de Celular</label>
-                <input type="text" placeholder="Ingrese su contraseña" id="pass">
-                <br><br>
-                <select class="itemsFormulario1" name="sucursal" id="">
-                    <option value="">Elegí la Sucursal</option>
-                    <option value="B">Belgrano</option>
-                    <option value="V">Villa Crespo</option>
-                </select>
-                <br><br>
-                <select class="itemsFormulario1" name="dia" id="">
-                    <option value="">Elegí el día</option>
-                    <option value="Mar">Martes</option>
-                    <option value="Mier">Miércoles</option>
-                    <option value="Juev">Jueves</option>
-                    <option value="Vier">Viernes</option>
-                    <option value="Sab">Sábado</option>
-                </select>
-                <br><br>
-                <select class="itemsFormulario1" name="horario" id="">
-                    <option value="">Horario disponible</option>
-                    <option value="">10 a 11 hs</option>
-                    <option value="">13 a 14 hs</option>
-                    <option value="">14 a 15 hs</option>
-                    <option value="">17 a 18 hs</option>
-                    <option value="">18 a 19 hs</option>
-                </select>
-                <br><br>
-                <input class="itemsFormulario1" type="submit" value="Reservar turno">
-                <input class="itemsFormulario1" type="reset" value="Borrar">
-                <br><br>
-                <p class="textoBlanco">*La información del turno se enviará a tu whatsapp</p>
-            </form>
+            <p class="ubicacion1">-Sucursal Villa Crespo: Av. Corrientes 5655</p>
+            <p class="ubicacion2">-Sucursal Belgrano: Av Cabildo 1428  </p>
+
+            <div class="formulario">
+                <h3 class="tituloIzquierda">Hace tu reserva</h3>
+                <form id="formulario" class="form">
+                    <label class="itemsFormulario" for="nombre">Tu Nombre</label>
+                    <input class="casilla" type="text" placeholder="Tu apodo tambien vale" id="nombre">
+                    <label class="itemsFormulario" for="nombre">Tu Número De Celular</label>
+                    <input class="casilla" type="text" placeholder="Num de area sin 0 y sin 15" id="pass">
+                    <select class="itemsFormulario1" name="sucursal" id="">
+                        <option value="">Elegí la Sucursal</option>
+                        <option value="B">Belgrano</option>
+                        <option value="V">Villa Crespo</option>
+                    </select>
+                    
+                    <select class="itemsFormulario1" name="dia" id="">
+                        <option value="">Elegí el día</option>
+                        <option value="Mar">Martes</option>
+                        <option value="Mier">Miércoles</option>
+                        <option value="Juev">Jueves</option>
+                        <option value="Vier">Viernes</option>
+                        <option value="Sab">Sábado</option>
+                    </select>
+                    
+                    <select class="itemsFormulario1" name="horario" id="">
+                        <option value="">Horario disponible</option>
+                        <option value="">10 a 11 hs</option>
+                        <option value="">13 a 14 hs</option>
+                        <option value="">14 a 15 hs</option>
+                        <option value="">17 a 18 hs</option>
+                        <option value="">18 a 19 hs</option>
+                    </select>
+                    
+                    <input class="botones" type="submit" value="Reservar turno">
+                    <input class="botones" type="reset" value="Borrar">
+                    
+                    <p class="textoBlanco">*La información del turno se enviará a tu whatsapp</p>
+                </form>
+            </div>
+            <div class="ubicacion">
+
+            </div>
         </main>
         <footer>
-            <div>
+            <div class="logoFooter">
                 <img src="../media/Logo-The-Barber-Job-Dorado.svg" alt="">
             </div>
             <p class="textoDerechos">2021. Todos los derechos reservados</p>
             
             <div class= "contenedorIconosRedesFooter">
-                <a href="https://www.facebook.com" target="_blank" > <img src="../media/facebook.png" alt="Icono de facebook" class="iconosRedesFooter"></a>
-                <a href="https://www.instagram.com" target="_blank"> <img src="../media/instagram.png" alt="Icono de instagram" class="iconosRedesFooter"></a>
-                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/whatsapp.png" alt="Icono de whatsapp" class="iconosRedesFooter"></a>
+                <a href="https://www.facebook.com" target="_blank" > <img src="../media/2.png" alt="Icono de facebook" class="iconosRedesFooter"></a>
+                <a href="https://www.instagram.com" target="_blank"> <img src="../media/3.png" alt="Icono de instagram" class="iconosRedesFooter"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/1.png" alt="Icono de whatsapp" class="iconosRedesFooter"></a>
             </div>
         </footer>
     </div>

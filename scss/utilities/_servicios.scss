@@ -1,14 +1,17 @@
 /*HTML SERVICIOS GRIDS*/
 
 .contenedorMainServicios{
+    font-family: 'Roboto', sans-serif;
     background-color: $colorPrincipalMain;
     display: grid;
-    grid-template-areas: "titulo1Servicios titulo1Servicios titulo1Servicios"
-                         "section1Servicios img1Servicios img1Servicios"
-                         "img2Servicios img2Servicios section2Servicios"
-                         "section3Servicios img3Servicios img3Servicios"
-                         "titulo2Servicios titulo2Servicios titulo2Servicios "
-                         "sectionAlCapone sectionTonyMontana sectionDonCorleone";
+    grid-template-areas: "titulo1Servicios titulo1Servicios"
+                         "section1Servicios img1Servicios"
+                         "img2Servicios section2Servicios"
+                         "section3Servicios img3Servicios"
+                         "titulo2Servicios titulo2Servicios"
+                         "sectionAlCapone sectionTonyMontana"
+                         "sectionDonCorleone sectionDonCorleone";
+
 
         .titulo1Servicios{
             text-align: center;
@@ -18,34 +21,81 @@
             grid-area: titulo1Servicios;
         }
         .section1Servicios{
-            grid-area: section1Servicios;                            
+            grid-area: section1Servicios;
+            margin-top: 2em;
+            display: flex;
+            flex-direction: column;
+            article{
+                h4{
+                    margin-left: 10rem;
+                }
+            }                            
         }
         .img1Servicios{
             grid-area: img1Servicios;
+            
             display: flex;
-            justify-content: center;
-            margin-bottom: 5rem;
+            margin-top: 4rem;
+            margin-left: 1rem;            
+            margin-bottom: 1em;
+            transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+            }  
+            img{
+                border: solid 1px grey;
+            }    
         }                        
         .section2Servicios{
             grid-area: section2Servicios;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
         }                        
         .img2Servicios{
             grid-area: img2Servicios;
             display: flex;
-            justify-content: center;
-            margin-bottom: 5rem;
+            margin-top: 4rem;
+            margin-left: 1rem;            
+            margin-bottom: 1em;
+            transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+                        &:hover{
+                            transform: scale(1.05);
+            }
+        }
+            img{
+                border: solid 1px grey;
+
+            }      
         }             
         .section3Servicios{
             grid-area: section3Servicios;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
         }                        
         .img3Servicios{
-            grid-area: img3Servicios;
+            
             display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }                        
+            margin-top: 4rem;
+            margin-left: 1rem;            
+            margin-bottom: 1em;
+            transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+                        &:hover{
+                            transform: scale(1.05);
+            }
+        }
+            img{
+                border: solid 1px grey;
+        }
+    }                        
         .titulo2Servicios{
-            margin-top: 5rem;
+            font-size: 2em;
+            margin-top: 5em;
             margin-bottom: 4rem;
             color: blanchedalmond;
             text-align: center;
@@ -53,49 +103,110 @@
         }                        
         .sectionAlCapone{
             grid-area: sectionAlCapone;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img{
+                border: solid 1px grey;
+                transition: 0.5s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }                          
+            }
+              
         }
         .sectionTonyMontana{
             grid-area: sectionTonyMontana;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img{
+                border: solid 1px grey;
+                
+                transition: 0.5s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }      
+            }
+            h4{
+                
+            }
         }
+
         .sectionDonCorleone{
             grid-area: sectionDonCorleone;
-            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img{            
+                border: solid 1px grey;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.05);
+                }      
+            }
+            
         }
-                        
 }
+                        
+
 
 /*MEDIA QUERIE MOBILE HTML SERVICIOS*/
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1200px){
     .contenedorMainServicios{
         display: grid;
         grid-template-areas: "titulo1Servicios"
-                             "img1Servicios "
-                             "section1Servicios "
-                             "img2Servicios"
+                             "img1Servicios"
+                             "section1Servicios"
+                             "img2Servicios" 
                              "section2Servicios"
                              "img3Servicios"
                              "section3Servicios"
                              "titulo2Servicios"
-                             "sectionAlCapone "
+                             "sectionAlCapone"
                              "sectionTonyMontana"
                              "sectionDonCorleone";
     }
+
+
+
+
+
+
+
+        .titulo1Servicios{
+            article{
+                margin: 0px;
+                text-align: center;
+            }
+            
+        }
         .img1Servicios{
+            
             display: flex;
             justify-content: center;
-            margin-bottom: 0rem;
+            img{
+                margin: 0px auto;
+                
+                margin-bottom: 1rem;                   
+            }
         }
         .section1Servicios{
-            margin-bottom: 4rem;
+            margin-bottom: 1em;
         }
         .img2Servicios{
             display: flex;
             justify-content: center;
-            margin-bottom: 0rem;
+            
+            img{
+                margin: 0px auto;
+                
+                margin-bottom: 1rem;   
+        }
         }
         .section2Servicios{
-            margin-bottom: 4rem;
+            
         }
         .img3Servicios{
             display: flex;
@@ -103,7 +214,44 @@
             margin-bottom: 0rem;
         }
         .section1Servicios{
-            margin-bottom: 4rem;
+            
         }
 
+        .sectionAlCapone{
+            .imagenAlCapone{            
+                display: flex;
+                justify-content: center;
+            }
+            
+                img{
+                    margin: 0px auto;
+                        
+                }
+              
+        }
+
+        .sectionTonyMontana{
+            .imagenTonyMontana{            
+            display: flex;
+            justify-content: center;            
+        }
+            img{
+                margin: 0px auto;;
+            }
+            
+                
+        }
+
+        .sectionDonCorleone{
+            .imagenDonCorleone{            
+            display: flex;
+            justify-content: center;            
+        }
+            img{
+                margin: 0px auto;;
+            }
+            
+                
+        }
+        
 }

@@ -2,52 +2,114 @@
 /*HTML MULTIMEDIA GRIDS*/
 
 .contenedorMainMultimedia{
+    font-family: 'Roboto', sans-serif;
     justify-content: space-around;
     display: grid;
-    grid-template-areas: "titulo1Multimedia videoMultimedia videoMultimedia"
+    grid-template-areas: "titulo1Multimedia titulo1Multimedia titulo1Multimedia"
+                         "videoMultimedia videoMultimedia videoMultimedia"
                          "titulo2Multimedia titulo2Multimedia titulo2Multimedia"
                          "img1Multimedia img2Multimedia img3Multimedia"
-                         "img4Multimedia img5Multimedia img6Multimedia";
+                         "img4Multimedia img2Multimedia img5Multimedia";
 
 
     .titulo1Multimedia{
+        font-size: 2em;
         color: blanchedalmond;
         text-align: center;
-        margin-top: 17rem;
-        margin-left: 8rem;
+        margin-top: 5em;
         grid-area: titulo1Multimedia;
     }
     .videoMultimedia{
-        margin-top: 4rem;
+        margin-bottom: 5em;
+        margin-top: 1rem;        
         grid-area: videoMultimedia;
+        iframe{
+            width: 100%;
+            height: 180%;
+        }
     }
     .titulo2Multimedia{
+        font-size: 2em;
         grid-area: titulo2Multimedia;
     }
         .img1Multimedia{
-            
+            display: flex;
+            justify-content: center;
+            transition: 0.5s;
+                &:hover{
+                    transform: scale(1.02);
+                }                        
             grid-area: img1Multimedia;
+                img{
+                    border: solid 1px grey;
+                }
+            
+            
         }
         .img2Multimedia{
+            display: flex;
+            justify-content: center;
+            transition: 0.5s;
+                &:hover{
+                    transform: scale(1.02);
+                }  
             grid-area: img2Multimedia;
+                img{
+                    border: solid 1px grey;
+                }
+            
+
         }
         .img3Multimedia{
+            display: flex;
+            justify-content: center;
+            margin-right: 0.5rem;
+            transition: 0.5s;
+                &:hover{
+                    transform: scale(1.02);
+                }             
             grid-area: img3Multimedia;
+                img{
+                    border: solid 1px grey;
+                }
         }
+
         .img4Multimedia{
+            display: flex;
+            justify-content: center;
+            transition: 0.5s;
+                &:hover{
+                    transform: scale(1.02);
+                }  
             grid-area: img4Multimedia;
+                img{
+                    border: solid 1px grey;
+                }
         }
+
         .img5Multimedia{
+            display: flex;
+            justify-content: center;
+            margin-right: 0.5rem;
+            transition: 0.5s;
+                &:hover{
+                    transform: scale(1.02);
+                }              
             grid-area: img5Multimedia;
+                img{
+                    border: solid 1px grey;
+                }
         }
+
         .img6Multimedia{
+            
             grid-area: img6Multimedia;
         }
 }
 
-/*MEDIA QUERIE MOBILE HTML MULTIMEDIA*/
+/*MEDIA QUERIE TABLET HTML MULTIMEDIA*/
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1300px){
     .contenedorMainMultimedia{
         display: grid;
         grid-template-areas: "titulo1Multimedia"
@@ -65,9 +127,25 @@
 
         .titulo1Multimedia{
             color: blanchedalmond;
-            text-align: center;
-            margin-top: 5rem;
-            text-align: center;
+            
+            text-align: center;            
+           
+        }
+
+        .videoMultimedia{
+            display: flex;
+            justify-content: center;
+           
+            
+            
+            iframe{           
+                margin: 0px auto;
+                width: 90%;
+            }
+        }
+
+        .titulo2Multimedia{
+
         }
             
 
@@ -96,3 +174,98 @@
             justify-content: center;
         }
 }
+
+/*MEDIA QUERIE MOBILE HTML MULTIMEDIA*/
+
+@media only screen and (max-width:480px){
+    .contenedorMainMultimedia{
+        display: grid;
+        grid-template-areas: "titulo1Multimedia"
+                             "videoMultimedia"
+                             "titulo2Multimedia"
+                             "img1Multimedia"
+                             "img2Multimedia"
+                             "img3Multimedia"
+                             "img4Multimedia"
+                             "img5Multimedia"
+                             "img6Multimedia";
+        
+        justify-content: center;
+    }
+
+        .titulo1Multimedia{
+            color: blanchedalmond;
+            
+            text-align: center;            
+           
+        }
+
+        .videoMultimedia{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10em;
+            width: 100%;
+            height: 50%;
+            iframe{ 
+                margin: 0px auto;
+                width: 90%;                
+                
+            }
+        }
+
+        .titulo2Multimedia{
+
+        }
+            
+
+        .img1Multimedia{
+            display: flex;    
+            justify-content: center;
+            img{
+                margin: 0px auto;
+                width: 95%;
+            }
+        }
+        .img2Multimedia{
+            display: flex;    
+            justify-content: center;
+            img{
+                margin: 0px auto;
+                width: 95%;
+            }
+            
+        }
+        .img3Multimedia{
+            display: flex;    
+            justify-content: center;
+            img{
+                margin: 0px auto;
+                width: 95%;
+            }
+        }
+        .img4Multimedia{
+            display: flex;    
+            justify-content: center;
+            img{
+                margin: 0px auto;
+                width: 95%;
+            }
+        }
+        .img5Multimedia{
+            display: flex;    
+            justify-content: center;
+            img{
+                margin: 0px auto;
+                width: 95%;
+            }
+        }
+        .img6Multimedia{
+            display: flex;    
+            justify-content: center;
+        }
+            img{
+                margin: 0px auto;
+                width: 95%;
+        }
+}
+

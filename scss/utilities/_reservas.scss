@@ -1,14 +1,76 @@
 /*class para los items del formulario*/
-.itemsFormulario {
-    text-align: left;
-    margin: 10px;
-    color: blanchedalmond;
-    padding: 5px;
-}
 
-.itemsFormulario1 {
-    text-align: left;
-    margin: 10px;
-    padding: 5px;
+.mainReservas{
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-areas: "ubicacion1"
+                         "ubicacion2"
+                         "formulario";
     
+
+    .formulario{
+        grid-area: formulario;    
+
+        h3{
+            text-align: center;
+            margin-top: 3em;
+            margin-bottom: 1rem;
+            margin-right: 12em;
+        }
+        .form{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: flex-start;
+            .itemsFormulario {            
+                margin-bottom: 0.5rem;;
+                color: blanchedalmond;
+                padding: 5px;
+            }
+            .casilla{
+                width: 60%;
+                height: 2rem;
+            }
+            input{
+                
+                margin-bottom: 2rem;
+            }
+            .itemsFormulario1{
+                width: 60%;
+                height: 2rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;         
+                padding: 5px;                
+            }
+            .botones{
+                width: 7.5rem;
+                height: 2rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;         
+                padding: 5px;
+                border-radius: 0.5rem;
+                margin-left: 7.5rem;
+
+            }
+        }
+    }
+    .ubicacion1{
+        grid-area: ubicacion1;
+        color: blanchedalmond;
+        text-align: center;
+        margin-top: 2em;
+        font-size:larger;
+        margin-right: 15em;
+    }
+    .ubicacion2{
+        grid-area: ubicacion2;
+        color: blanchedalmond;
+        text-align: center;
+        margin-top: 1em;
+        font-size:larger;
+        margin-right: 17em;
+    }
 }
