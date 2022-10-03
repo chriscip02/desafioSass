@@ -121,7 +121,10 @@
     grid-template-areas: "titulo1"                              "article1" "article2" "article3" "article4" "titulo2"; }
   .titulo1Nosotros {
     text-align: center;
-    margin-left: 2em; }
+    margin-top: -5em; }
+  main div p {
+    margin-top: -2em;
+    margin-bottom: 2em; }
   .article1Nosotros {
     padding-left: 2rem; }
     .article1Nosotros .imagen1 {
@@ -133,6 +136,8 @@
         margin-bottom: 1rem; }
     .article1Nosotros .texto1 {
       text-align: center; }
+    .article1Nosotros .texto1 p {
+      margin-top: 0.5em; }
   .article2Nosotros {
     padding-left: 2rem; }
     .article2Nosotros .imagen2 {
@@ -144,6 +149,8 @@
         margin-bottom: 1rem; }
     .article2Nosotros .texto2 {
       text-align: center; }
+    .article2Nosotros .texto2 p {
+      margin-top: 0.5em; }
   .article3Nosotros {
     padding-left: 2rem; }
     .article3Nosotros .imagen3 {
@@ -155,6 +162,8 @@
         margin-bottom: 1rem; }
     .article3Nosotros .texto3 {
       text-align: center; }
+    .article3Nosotros .texto3 p {
+      margin-top: 0.5em; }
   .article4Nosotros {
     padding-left: 2rem; }
     .article4Nosotros .imagen4 {
@@ -165,10 +174,14 @@
         width: 90%;
         margin-bottom: 1rem; }
     .article4Nosotros .texto4 {
-      text-align: center; } }
+      text-align: center; }
+    .article4Nosotros .texto4 p {
+      margin-top: 0.5em; }
+  .titulo2Nosotros {
+    margin-top: -8em; } }
 
 /*MEDIA QUERIE TABLET HTML NOSOTROS*/
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
   header {
     font-size: 0.62em; }
   .contenedorMainNosotros {
@@ -524,62 +537,133 @@
     margin: 0px auto;
     width: 95%; } }
 
-/*class para los items del formulario*/
-.mainReservas {
-  font-family: 'Roboto', sans-serif;
-  display: grid;
-  grid-template-areas: "ubicacion1" "ubicacion2" "formulario"; }
-  .mainReservas .formulario {
-    grid-area: formulario; }
-    .mainReservas .formulario h3 {
+/* MEDIA QUERIES RESERVAS MOBILE*/
+@media only screen and (max-width: 600px) {
+  .mainReservas {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-areas: "ubicacion1" "ubicacion2" "formulario"; }
+    .mainReservas .formulario {
+      grid-area: formulario; }
+      .mainReservas .formulario h3 {
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: 1rem; }
+      .mainReservas .formulario .form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .mainReservas .formulario .form .itemsFormularioNombre {
+          margin-bottom: 0.5rem;
+          color: blanchedalmond;
+          padding: 5px;
+          text-align: left;
+          margin-right: 17.5rem; }
+        .mainReservas .formulario .form .itemsFormularioCelular {
+          margin-bottom: 0.5rem;
+          color: blanchedalmond;
+          padding: 5px;
+          text-align: left;
+          margin-right: 13rem; }
+        .mainReservas .formulario .form .casilla {
+          width: 60%;
+          height: 2rem;
+          padding-left: 0.5rem; }
+        .mainReservas .formulario .form input {
+          margin-bottom: 2rem; }
+        .mainReservas .formulario .form .itemsFormulario1 {
+          width: 60%;
+          height: 2rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          padding: 5px; }
+        .mainReservas .formulario .form .botones {
+          width: 7.5rem;
+          height: 2rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          padding: 5px;
+          border-radius: 0.5rem; }
+        .mainReservas .formulario .form .textoBlancoReservas {
+          color: antiquewhite;
+          padding-bottom: 1rem; }
+    .mainReservas .ubicacion1 {
+      grid-area: ubicacion1;
+      color: blanchedalmond;
+      font-size: larger;
       text-align: center;
-      margin-top: 3em;
-      margin-bottom: 1rem;
-      margin-right: 12em; }
-    .mainReservas .formulario .form {
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; }
-      .mainReservas .formulario .form .itemsFormulario {
-        margin-bottom: 0.5rem;
-        color: blanchedalmond;
-        padding: 5px; }
-      .mainReservas .formulario .form .casilla {
-        width: 60%;
-        height: 2rem; }
-      .mainReservas .formulario .form input {
-        margin-bottom: 2rem; }
-      .mainReservas .formulario .form .itemsFormulario1 {
-        width: 60%;
-        height: 2rem;
-        margin-top: 1rem;
+      margin-top: 5em; }
+    .mainReservas .ubicacion2 {
+      grid-area: ubicacion2;
+      color: blanchedalmond;
+      text-align: center;
+      margin-top: 1em;
+      font-size: larger; } }
+
+/*class para los items del formulario*/
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+  .mainReservas {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-areas: "ubicacion1" "ubicacion2" "formulario"; }
+    .mainReservas .formulario {
+      grid-area: formulario; }
+      .mainReservas .formulario h3 {
+        text-align: center;
+        margin-top: 3em;
         margin-bottom: 1rem;
-        padding: 5px; }
-      .mainReservas .formulario .form .botones {
-        width: 7.5rem;
-        height: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        padding: 5px;
-        border-radius: 0.5rem;
-        margin-left: 7.5rem; }
-  .mainReservas .ubicacion1 {
-    grid-area: ubicacion1;
-    color: blanchedalmond;
-    text-align: center;
-    margin-top: 2em;
-    font-size: larger;
-    margin-right: 15em; }
-  .mainReservas .ubicacion2 {
-    grid-area: ubicacion2;
-    color: blanchedalmond;
-    text-align: center;
-    margin-top: 1em;
-    font-size: larger;
-    margin-right: 17em; }
+        margin-right: 12em; }
+      .mainReservas .formulario .form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; }
+        .mainReservas .formulario .form .itemsFormularioNombre {
+          margin-bottom: 0.5rem;
+          color: blanchedalmond;
+          padding: 5px; }
+        .mainReservas .formulario .form .itemsFormularioCelular {
+          margin-bottom: 0.5rem;
+          color: blanchedalmond;
+          padding: 5px; }
+        .mainReservas .formulario .form .casilla {
+          width: 60%;
+          height: 2rem;
+          padding-left: 0.5rem; }
+        .mainReservas .formulario .form input {
+          margin-bottom: 2rem; }
+        .mainReservas .formulario .form .itemsFormulario1 {
+          width: 60%;
+          height: 2rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          padding: 5px; }
+        .mainReservas .formulario .form .botones {
+          width: 7.5rem;
+          height: 2rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          padding: 5px;
+          border-radius: 0.5rem; }
+    .mainReservas .ubicacion1 {
+      grid-area: ubicacion1;
+      color: blanchedalmond;
+      text-align: center;
+      margin-top: 2em;
+      font-size: larger;
+      margin-right: 15em; }
+    .mainReservas .ubicacion2 {
+      grid-area: ubicacion2;
+      color: blanchedalmond;
+      text-align: center;
+      margin-top: 1em;
+      font-size: larger;
+      margin-right: 17em; } }
 
 /*EXTEND PARA HEADER Y FOOTER*/
 .iconosRedesHeader, .iconosRedesFooter {

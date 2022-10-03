@@ -201,15 +201,17 @@
     
     } 
         .titulo1Nosotros{
-            text-align: center;
+            text-align: center; 
+            margin-top: -5em;
+        }
+        
+        main div p{
+            margin-top: -2em;
+            margin-bottom: 2em;
             
-            
-            margin-left: 2em;          
-        }     
+        }
     
-        .article1Nosotros{    
-            
-           
+        .article1Nosotros{            
             padding-left: 2rem;
 
             .imagen1{
@@ -224,7 +226,14 @@
 
             .texto1{
                 text-align: center;             
-            }           
+            }
+            
+            .texto1 p{
+                margin-top: 0.5em;
+
+            }
+            
+            
                 
         
 
@@ -250,6 +259,10 @@
             .texto2{
                 text-align: center;             
             }
+
+            .texto2 p{
+                margin-top: 0.5em;
+            }
         }
         
         .article3Nosotros{
@@ -268,6 +281,10 @@
 
             .texto3{
                 text-align: center;             
+            }
+
+            .texto3 p{
+                margin-top: 0.5em;
             }
         }
         
@@ -288,13 +305,21 @@
             .texto4{                
                 text-align: center;             
             }
+
+            .texto4 p{
+                margin-top: 0.5em;
+            }
+        }
+
+        .titulo2Nosotros{
+            margin-top: -8em;
         }
 
 }
 
 /*MEDIA QUERIE TABLET HTML NOSOTROS*/
 
-@media only screen and (min-width:600px) and (max-width:1200px){
+@media only screen and (min-width:601px) and (max-width:1200px){
     header{
         font-size: 0.62em;
     }

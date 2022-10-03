@@ -1,4 +1,115 @@
+/* MEDIA QUERIES RESERVAS MOBILE*/
+
+@media only screen and (max-width:600px) {
+    .mainReservas{
+        font-family: 'Roboto', sans-serif;
+        display: grid;
+        grid-template-areas: "ubicacion1"
+                             "ubicacion2"
+                             "formulario";
+        
+    
+        .formulario{
+            grid-area: formulario;    
+    
+            h3{
+                text-align: center;
+                margin-top: 3em;
+                margin-bottom: 1rem;
+                
+            }
+            .form{
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;                
+                
+                .itemsFormularioNombre {            
+                    margin-bottom: 0.5rem;;
+                    color: blanchedalmond;
+                    padding: 5px;
+                    text-align: left;
+                    margin-right: 17.5rem;
+                    
+                }
+
+                .itemsFormularioCelular {            
+                    margin-bottom: 0.5rem;;
+                    color: blanchedalmond;
+                    padding: 5px;
+                    text-align: left;
+                    margin-right: 13rem;
+                    
+                }
+
+                .casilla{
+                    width: 60%;
+                    height: 2rem;
+                    padding-left: 0.5rem;
+                    
+                
+                }
+                input{
+                    
+                    margin-bottom: 2rem;
+                }
+                .itemsFormulario1{
+                    width: 60%;
+                    height: 2rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;         
+                    padding: 5px;                
+                }
+                .botones{
+                    width: 7.5rem;
+                    height: 2rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;         
+                    padding: 5px;
+                    border-radius: 0.5rem;            
+                }
+
+                .textoBlancoReservas{
+                    color: antiquewhite;
+                    padding-bottom: 1rem;
+                    
+                }
+            }
+        }
+        .ubicacion1{
+            
+            grid-area: ubicacion1;
+            color: blanchedalmond;            
+            font-size:larger;
+            text-align:center;
+            margin-top: 5em;
+
+            
+        }
+        .ubicacion2{
+            grid-area: ubicacion2;
+            color: blanchedalmond;
+            text-align: center;
+            margin-top: 1em;
+            font-size:larger;
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 /*class para los items del formulario*/
+
+@media only screen and (min-width:601px) and (max-width:1200px) {
 
 .mainReservas{
     font-family: 'Roboto', sans-serif;
@@ -22,17 +133,27 @@
             max-width: 600px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column;
-            
+            flex-direction: column;            
             align-items: flex-start;
-            .itemsFormulario {            
+
+            .itemsFormularioNombre {            
                 margin-bottom: 0.5rem;;
                 color: blanchedalmond;
                 padding: 5px;
             }
+
+            .itemsFormularioCelular {            
+                margin-bottom: 0.5rem;;
+                color: blanchedalmond;
+                padding: 5px;
+            }
+
             .casilla{
                 width: 60%;
                 height: 2rem;
+                padding-left: 0.5rem;
+                
+            
             }
             input{
                 
@@ -52,7 +173,8 @@
                 margin-bottom: 1rem;         
                 padding: 5px;
                 border-radius: 0.5rem;
-                margin-left: 7.5rem;
+                
+                
 
             }
         }
@@ -73,4 +195,6 @@
         font-size:larger;
         margin-right: 17em;
     }
+}
+
 }
