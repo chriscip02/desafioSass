@@ -11,6 +11,7 @@ $backgroundHeaderAndFooter: rgb(41,40,40);
 @import "utilities/servicios";
 @import "utilities/multimedia";
 @import "utilities/reservas";
+@import "utilities/productos";
 
 /*EXTEND PARA HEADER Y FOOTER*/
 
@@ -49,9 +50,9 @@ $colorMasAlineacion: (
 }
 
 
-/*HEADER (PARA TODOS LOS HTML EL MISMO)*/
+/*HEADER (PARA TODOS LOS HTML EL MISMO MENOS PARA EL DE PRODUCTOS (el estilo del header del html productos esta en su hoja de sass)*/
 
-header{
+.headerGeneral{
     font-family: 'Roboto', sans-serif;
     background-color: $backgroundHeaderAndFooter;
     @include gridPadding;    
@@ -112,10 +113,10 @@ header{
                 
 }
 
-/*MEDIA QUERIES MOBILE PARA EL HEADER*/
+/*MEDIA QUERIES MOBILE PARA EL HEADER (PARA TODOS LOS HTML EL MISMO MENOS PARA EL DE PRODUCTOS (el estilo del header del html productos esta en su hoja de sass)*/
 
 @media only screen and (max-width:768px){
-    header{
+    .headerGeneral{
         height: 20em;        
         padding: 0px;
         grid-template-areas: "logo logo nav iconosHeader";
@@ -157,10 +158,10 @@ header{
         }
 }
 
-/*MEDIA QUERIES TABLET PARA EL HEADER*/
+/*MEDIA QUERIES TABLET PARA EL HEADER (PARA TODOS LOS HTML EL MISMO MENOS PARA EL DE PRODUCTOS (el estilo del header del html productos esta en su hoja de sass)*/
 
 @media only screen and (min-width: 769px) and (max-width:1024px){
-    header{
+    .headerGeneral{
         height: 22em;
         display: grid;
         padding: 0px;
@@ -292,13 +293,7 @@ footer{
             display: flex;
             align-items: center;
             justify-content: center;
-            img{
-                
-                
-                
-            }
             
-                    
         }
         .contenedorIconosRedesFooter{
             display: flex;

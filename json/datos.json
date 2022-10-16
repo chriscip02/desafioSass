@@ -1,0 +1,6 @@
+[
+    {"id": 14, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 15, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 16, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" }
+    
+]

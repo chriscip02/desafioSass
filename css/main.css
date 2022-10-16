@@ -739,6 +739,75 @@
       font-size: larger;
       margin-right: 18rem; } }
 
+/*EXTEND PARA HEADER*/
+.iconosRedesHeader, .iconosRedesFooter {
+  /*height: 1.4rem;*/
+  margin: 0.5rem;
+  transition: 0.5s; }
+  .iconosRedesHeader:hover, .iconosRedesFooter:hover {
+    transform: scale(1.2); }
+
+/*MIXIN*/
+/*MAPAS*/
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*MEDIA QUERIE MOBILE HTML PRODUCTOS (el resto de los html tienen su estilo en estilos.scss*/
+.headerProductos {
+  font-family: 'Roboto', sans-serif;
+  background-color: #292828;
+  display: grid;
+  padding: 1.25rem;
+  border: solid #202020;
+  position: sticky;
+  z-index: 1000;
+  top: 0px;
+  height: 7rem;
+  grid-template-areas: "logo nav iconosHeader botonCarrito";
+  grid-template-columns: 1fr 3fr 0.6fr 0.4fr; }
+  .headerProductos .contenedorLogo {
+    transition: 0.5s;
+    color: blanchedalmond;
+    grid-area: logo; }
+    .headerProductos .contenedorLogo:hover {
+      transform: scale(1.1); }
+  .headerProductos .contenedorIconosHeader {
+    grid-area: iconosHeader;
+    /*margin-top: 1rem;
+        margin-left: 5.5rem;*/ }
+  .headerProductos .contenedorNav {
+    grid-area: nav;
+    margin: 0.62rem;
+    display: flex;
+    align-items: center; }
+  .headerProductos .contenedorMenu {
+    font-size: 1.1rem;
+    display: flex;
+    margin-left: 5rem;
+    margin-top: 1.5rem; }
+  .headerProductos li {
+    margin: 0.5rem;
+    list-style: none;
+    transition: 0.5s; }
+    .headerProductos li:hover {
+      transform: scale(1.2); }
+  .headerProductos a {
+    color: blanchedalmond;
+    text-decoration: none; }
+    .headerProductos a:hover {
+      text-decoration: none;
+      color: whitesmoke; }
+  .headerProductos .contenedorIconoCarrito {
+    grid-area: botonCarrito; }
+    .headerProductos .contenedorIconoCarrito button {
+      font-size: 16px;
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px 20px; }
+
 /*EXTEND PARA HEADER Y FOOTER*/
 .iconosRedesHeader, .iconosRedesFooter {
   /*height: 1.4rem;*/
@@ -755,8 +824,8 @@
   padding: 0;
   box-sizing: border-box; }
 
-/*HEADER (PARA TODOS LOS HTML EL MISMO)*/
-header {
+/*HEADER (PARA TODOS LOS HTML EL MISMO MENOS PARA EL DE PRODUCTOS (el estilo del header del html productos esta en su hoja de sass)*/
+.headerGeneral {
   font-family: 'Roboto', sans-serif;
   background-color: #292828;
   display: grid;
@@ -768,42 +837,42 @@ header {
   height: 7rem;
   grid-template-areas: "logo nav iconosHeader";
   grid-template-columns: 1fr 3fr 1fr; }
-  header .contenedorLogo {
+  .headerGeneral .contenedorLogo {
     transition: 0.5s;
     color: blanchedalmond;
     grid-area: logo; }
-    header .contenedorLogo:hover {
+    .headerGeneral .contenedorLogo:hover {
       transform: scale(1.1); }
-  header .contenedorIconosHeader {
+  .headerGeneral .contenedorIconosHeader {
     grid-area: iconosHeader;
     /*margin-top: 1rem;
         margin-left: 5.5rem;*/ }
-  header .contenedorNav {
+  .headerGeneral .contenedorNav {
     grid-area: nav;
     margin: 0.62rem;
     display: flex;
     align-items: center; }
-  header .contenedorMenu {
+  .headerGeneral .contenedorMenu {
     font-size: 1.1rem;
     display: flex;
     margin-left: 5rem;
     margin-top: 1.5rem; }
-  header li {
+  .headerGeneral li {
     margin: 0.5rem;
     list-style: none;
     transition: 0.5s; }
-    header li:hover {
+    .headerGeneral li:hover {
       transform: scale(1.2); }
-  header a {
+  .headerGeneral a {
     color: blanchedalmond;
     text-decoration: none; }
-    header a:hover {
+    .headerGeneral a:hover {
       text-decoration: none;
       color: whitesmoke; }
 
-/*MEDIA QUERIES MOBILE PARA EL HEADER*/
+/*MEDIA QUERIES MOBILE PARA EL HEADER (PARA TODOS LOS HTML EL MISMO MENOS PARA EL DE PRODUCTOS (el estilo del header del html productos esta en su hoja de sass)*/
 @media only screen and (max-width: 768px) {
-  header {
+  .headerGeneral {
     height: 20em;
     padding: 0px;
     grid-template-areas: "logo logo nav iconosHeader";
@@ -827,9 +896,9 @@ header {
       margin: 0px;
       font-size: 1.5em; } }
 
-/*MEDIA QUERIES TABLET PARA EL HEADER*/
+/*MEDIA QUERIES TABLET PARA EL HEADER (PARA TODOS LOS HTML EL MISMO MENOS PARA EL DE PRODUCTOS (el estilo del header del html productos esta en su hoja de sass)*/
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  header {
+  .headerGeneral {
     height: 22em;
     display: grid;
     padding: 0px;

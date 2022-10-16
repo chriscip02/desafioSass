@@ -10,15 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="SALON, CORTE A NAVAJA, CORTE A TIJERA, ARREGLOS DE BARBA, BARBA, SPA, PELUQUERIA, AFEITADA, BARBERO, PELUQUERO, BIGOTE, SALON, PEINADO, CUIDADO PERSONAL">
     <meta name="description" content="Nuestra Barbería ofrece la atención de los mejores profesionales, como también del mejor confort para que tu espera sea de lo más agradable y gratificante. Vení a conocernos!">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <!--Link de css-->
     <link rel="stylesheet" href="../css/main.css">
+    
 
-    <title>Nosotros - La Barbería</title>
+    <title>La Barbería</title>
 </head>
 <body>
     <div>
-        <header class="headerGeneral">
+        <header class="headerProductos">
             <div class="contenedorLogo">
                 <img src="../media/Logo-The-Barber-Job-Dorado.svg" alt="Logo The Barber Job">
             </div>
@@ -39,67 +41,39 @@
                 <a href="https://www.instagram.com" target="_blank"> <img src="../media/3.png" alt="Icono de instagram" class="iconosRedesHeader"></a>
                 <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/1.png" alt="Icono de whatsapp" class="iconosRedesHeader"></a>
             </div>
+
+            <div class="contenedorIconoCarrito">
+                <button id="boton-carrito"><i class="fa fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+            </div>
         </header>
 
-        <main class="contenedorMainNosotros">
-            <div class="titulo1Nosotros">
-                <h1>Bienvenido a nuestro Club de Caballeros</h1>
-                <p>Transformate en lo que querés ser. Con un corte de pelo, un peinado moderno o un arreglo de barba te vas a ver como siempre quisiste. Lucí impecable y con estilo.</p>
+        <div class="contenedorProductos">
+            <main id="contenedor-productos">
+                
+                
+            </main>
+
+            <div class="modal-contenedor"> 
+                <div class="modal-carrito">
+                    <h3>Carrito</h3>
+                    <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                    <div id="carrito-contenedor">
+                        <!--<div class="productoEnCarrito">
+                                <p>Buzo1</p
+                                <p>Precio: $1200</p
+                                <button class="boton-eliminar"><i class=fas fa-trash-alt"></i></button>
+                            </div>                
+                        -->
+                    </div>
+                    <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                    <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>           
+                </div>
             </div>
+        </div>
             
-            <article class="article1Nosotros">
-                <div class="imagen1">
-                    <img src="../media/corte400x267 (1).jpg" alt="imagen de una tijera y una navaja" class="imagenesNosotros">                
-                </div>
-                <div class="texto1">
-                    <h2>Corte de Cabello</h2>
-                    <p>Las mejores tecnicas de cortes a tijera</p>
-                </div>
-            </article>
-            
-            
-            <article class="article2Nosotros">
-                <div class="imagen2">          
-                    <img src="../media/navaja400x267 (1).jpg" alt="Imagen de una navaja afeitando" class="imagenesNosotros">
-                </div>  
-                <div class="texto2">
-                    <h2>Barba y Bigote</h2>
-                    <p>Arreglo de barba y bigote, terminación con navaja</p>
-                </div>
-            </article>
-
-
-            <article class="article3Nosotros">
-                <div class="imagen3">
-                    <img src="../media/botellas400.jpg" alt="imagen de diferentes bebidas" class="imagenesNosotros">
-                </div>
-                <div class="texto3">
-                    <h2>¿Algo de tomar?</h2>
-                    <p>Mientras esperas tu turno tomate algo</p>
-                </div>
-            </article>   
-
-           
-            
-            <article class="article4Nosotros">
-                <div class="imagen4">
-                    <img src="../media/pool400x267.jpg" alt="Imagen de una mesa de pool" class="imagenesNosotros">  
-                </div> 
-                <div class="texto4">        
-                    <h2>Entretenimiento</h2>
-                    <p>Para ponerle mas onda a la espera, tenemos diferentes juegos para vos</p> 
-                </div>            
-            </article>
-            
-            <div class="titulo2Nosotros">
-            <h3>Conquista tu territorio</h3>
-            <p>Creamos un espacio para hombres donde las tijeras y las navajas son las herramientas fundamentales para que tu presencia se note donde quiera que vayas.
-                El mundo es tuyo. Conquistalo.</p>
-            </div>
-        </main>
         <footer>
             <div class="logoFooter">
-                <img src="../media/Logo-The-Barber-Job-Dorado.svg" alt="">
+                <img src="../media/Logo-The-Barber-Job-Dorado.svg" alt="Logo The Barber Job">
             </div>
             <p class="textoDerechos">2021. Todos los derechos reservados</p>
             
@@ -110,5 +84,10 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/productos.js"></script>
+    
+
 </body>
+
 </html>

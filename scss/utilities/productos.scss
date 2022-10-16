@@ -1,0 +1,108 @@
+/*EXTEND PARA HEADER*/
+
+%estiloIconosRedes {
+    /*height: 1.4rem;*/
+    margin: 0.5rem;
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.2);
+    }    
+}
+
+/*MIXIN*/
+
+@mixin gridPadding {
+    display: grid;
+    padding: 1.25rem;
+    
+}
+
+
+/*MAPAS*/
+$colorMasAlineacion: (
+    color: blanchedalmond,
+    text-align: right,
+);
+
+
+
+/*RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*MEDIA QUERIE MOBILE HTML PRODUCTOS (el resto de los html tienen su estilo en estilos.scss*/
+.headerProductos{
+    font-family: 'Roboto', sans-serif;
+    background-color: $backgroundHeaderAndFooter;
+    @include gridPadding;    
+    border: solid rgb(32, 32, 32);
+    position: sticky;
+    z-index: 1000;
+    top: 0px;
+    height: 7rem;    
+    grid-template-areas: "logo nav iconosHeader botonCarrito";
+    grid-template-columns: 1fr 3fr 0.6fr 0.4fr;
+    .contenedorLogo{
+        transition: 0.5s;
+        &:hover{
+            transform: scale(1.1);
+        }           
+        color: map-get($map: $colorMasAlineacion, $key:color );
+        grid-area: logo;
+    }
+    .contenedorIconosHeader{
+        grid-area: iconosHeader;
+        /*margin-top: 1rem;
+        margin-left: 5.5rem;*/
+       
+            
+    }
+    .contenedorNav{
+        grid-area: nav;
+        margin: 0.62rem;        
+        display: flex;
+        align-items: center;  
+    }
+        .contenedorMenu{
+            font-size: 1.1rem;
+            display: flex;
+            margin-left: 5rem;
+            margin-top: 1.5rem;
+        }        
+            li{                
+                margin: 0.5rem;
+                list-style: none;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.2);
+
+                }
+                
+            }
+            a{
+                color: blanchedalmond;
+                text-decoration: none;
+                
+                &:hover{
+                    text-decoration: none;
+                    color: whitesmoke;
+                    
+                }
+            }
+    .contenedorIconoCarrito{
+        grid-area: botonCarrito;
+        button {
+            font-size: 16px;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px 20px;
+        
+        }
+    }            
+}
