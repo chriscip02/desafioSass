@@ -1,6 +1,6 @@
 /* MEDIA QUERIES RESERVAS MOBILE*/
 
-@media only screen and (max-width:600px) {
+@media only screen and (min-width:320px) and (max-width:480px) {
     .mainReservas{
         font-family: 'Roboto', sans-serif;
         display: grid;
@@ -31,7 +31,7 @@
                     color: blanchedalmond;
                     padding: 5px;
                     text-align: left;
-                    margin-right: 17.5rem;
+                    margin-right: 7.5em;
                     
                 }
 
@@ -40,7 +40,7 @@
                     color: blanchedalmond;
                     padding: 5px;
                     text-align: left;
-                    margin-right: 13rem;
+                    margin-right: 3rem;
                     
                 }
 
@@ -72,8 +72,9 @@
                 }
 
                 .textoBlancoReservas{
+                    text-align: center;
                     color: antiquewhite;
-                    padding-bottom: 1rem;
+                    padding-top: 2rem;
                     
                 }
             }
@@ -82,7 +83,7 @@
             
             grid-area: ubicacion1;
             color: blanchedalmond;            
-            font-size:larger;
+            font-size:medium;
             text-align:center;
             margin-top: 5em;
 
@@ -93,7 +94,7 @@
             color: blanchedalmond;
             text-align: center;
             margin-top: 1em;
-            font-size:larger;
+            font-size:medium;
             
         }
     }
@@ -107,9 +108,113 @@
 
 
 
-/*class para los items del formulario*/
+/*MEDIA QUERIE IPADS, TABLETS */
 
-@media only screen and (min-width:601px) and (max-width:1200px) {
+@media only screen and (min-width:481px) and (max-width:768px) {
+
+    .mainReservas{
+        font-family: 'Roboto', sans-serif;
+        display: grid;
+        grid-template-areas: "ubicacion1"
+                             "ubicacion2"
+                             "formulario";
+        
+    
+        .formulario{
+            grid-area: formulario;    
+    
+            h3{
+                font-size: xx-large;
+                text-align: center;
+                margin-top: 3em;
+                margin-bottom: 1rem;
+                
+            }
+            .form{
+                font-size: x-large;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;  
+    
+                .itemsFormularioNombre {            
+                    margin-bottom: 0.5rem;;
+                    color: blanchedalmond;
+                    padding: 5px;
+                    margin-right: 14rem;
+                    
+                }
+    
+                .itemsFormularioCelular {            
+                    margin-bottom: 0.5rem;;
+                    color: blanchedalmond;
+                    padding: 5px;
+                    margin-right: 7rem;
+                    
+                }
+    
+                .casilla{
+                    width: 70%;
+                    height: 3rem;
+                    padding-left: 0.5rem;
+                    
+                
+                }
+                input{
+                    
+                    margin-bottom: 2rem;
+                }
+                .itemsFormulario1{
+                    width: 70%;
+                    height: 3rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;         
+                    padding: 5px;                
+                }
+                .botones{
+                    width: 9rem;
+                    height: 3rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;         
+                    padding: 5px;
+                    border-radius: 0.5rem;                 
+                }
+
+                .textoBlancoReservas{
+                    text-align: center;
+                    color: antiquewhite;
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
+                    
+                }
+            }
+        }
+        .ubicacion1{
+            grid-area: ubicacion1;
+            color: blanchedalmond;
+            text-align: center;
+            margin-top: 2em;
+            font-size: xx-large;
+            
+        }
+        .ubicacion2{
+            grid-area: ubicacion2;
+            color: blanchedalmond;
+            text-align: center;
+            margin-top: 1em;
+            font-size: xx-large;
+            
+        }
+    }
+    
+    }
+
+
+    /*MEDIA QUERIE SMALL SCREENS, LAPTOPS*/
+
+@media only screen and (min-width:769px) {
 
 .mainReservas{
     font-family: 'Roboto', sans-serif;
@@ -126,7 +231,9 @@
             text-align: center;
             margin-top: 3em;
             margin-bottom: 1rem;
-            margin-right: 12em;
+            margin-right: 29rem;
+            
+            
         }
         .form{
             width: 100%;
@@ -177,6 +284,14 @@
                 
 
             }
+
+            .textoBlancoReservas{
+                text-align: center;
+                color: antiquewhite;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                
+            }
         }
     }
     .ubicacion1{
@@ -185,7 +300,8 @@
         text-align: center;
         margin-top: 2em;
         font-size:larger;
-        margin-right: 15em;
+        margin-right: 15rem;
+        
     }
     .ubicacion2{
         grid-area: ubicacion2;
@@ -193,7 +309,8 @@
         text-align: center;
         margin-top: 1em;
         font-size:larger;
-        margin-right: 17em;
+        margin-right: 18rem;
+        
     }
 }
 
