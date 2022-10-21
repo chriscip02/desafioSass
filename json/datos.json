@@ -1,6 +1,14 @@
 [
-    {"id": 14, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
-    {"id": 15, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
-    {"id": 16, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" }
-    
+    {"id": 1, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 2, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 3, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 4, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 5, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 6, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 7, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 8, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 9, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 10, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 11, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" },
+    {"id": 12, "nombre": "", "categoria": "Maquinas", "tipo": "Cortadora", "cantidad": 1, "precio": 13000, "img": "../media/imgProductos/product-6.jpg" }    
 ]
