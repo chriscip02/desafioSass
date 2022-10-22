@@ -1,8 +1,8 @@
 /*EXTEND PARA HEADER*/
 
 %estiloIconosRedes {
-    /*height: 1.4rem;*/
-    margin: 0.5rem;
+    /*height: 22.4px;*/
+    margin: 8px;
     transition: 0.5s;
     &:hover{
         transform: scale(1.2);
@@ -13,7 +13,7 @@
 
 @mixin gridPadding {
     display: grid;
-    padding: 1.25rem;
+    padding: 20px;
     
 }
 
@@ -44,8 +44,8 @@ $colorMasAlineacion: (
     border: solid rgb(32, 32, 32);
     position: sticky;
     z-index: 1000;
-    top: 0px;
-    height: 7rem;    
+    top: 0rem;
+    height: 112px;    
     grid-template-areas: "logo nav iconosHeader botonCarrito";
     grid-template-columns: 1fr 3fr 0.6fr 0.4fr;
     .contenedorLogo{
@@ -58,25 +58,25 @@ $colorMasAlineacion: (
     }
     .contenedorIconosHeader{
         grid-area: iconosHeader;
-        /*margin-top: 1rem;
-        margin-left: 5.5rem;*/
+        /*margin-top: 16px;
+        margin-left: 88px;*/
        
             
     }
     .contenedorNav{
         grid-area: nav;
-        margin: 0.62rem;        
+        margin: 9.92px;        
         display: flex;
         align-items: center;  
     }
         .contenedorMenu{
-            font-size: 1.1rem;
+            font-size: 17.6px;
             display: flex;
-            margin-left: 5rem;
-            margin-top: 1.5rem;
+            margin-left: 80px;
+            margin-top: 24px;
         }        
             li{                
-                margin: 0.5rem;
+                margin: 8px;
                 list-style: none;
                 transition: 0.5s;
                 &:hover{
@@ -97,12 +97,22 @@ $colorMasAlineacion: (
             }
     .contenedorIconoCarrito{
         grid-area: botonCarrito;
-        button {
-            font-size: 16px;
-            text-align: center;
-            border-radius: 8px;
+        #boton-carrito {
+            border: none;
+            color: royalblue;
+            font-size: 40px;
+            background-color: white;
+            border-radius: 50%;
             padding: 10px 20px;
-        
+            transition: all .3s;
+        }
+        #boton-carrito:hover {
+            cursor: pointer;
+            color: white;
+            background-color: royalblue;
+        }
+        #boton-carrito:focus {
+            outline: none;
         }
     }            
 }
@@ -113,66 +123,21 @@ $colorMasAlineacion: (
 .contenedorProductos{
     background-color: rgb(43, 43, 44);
     #contenedor-productos {
-        max-width: 1200px;
-        margin: 0px auto;
+        max-width: 75rem;
+        margin: 0rem auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
 
         .producto {
             max-width: 20%;
-            padding: 10px;
-            margin: 10px;
-            margin-bottom: 20px;
-            box-shadow: 2px 6px 3px 3px rgba(12, 12, 12, 0.3);
-        }
-        
+            padding: .625rem;
+            margin: .625rem;
+            margin-bottom: 1.25rem;
+            box-shadow: .125rem .375rem .1875rem .1875rem rgba(12, 12, 12, 0.3);
+        }  
         
         
     
     }
-
-    .modal-contenedor{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0,0,0, 0.3);
-        display: flex;
-        justify-content: center;
-        transition: all .5s;
-        opacity: 0;
-        visibility: hidden;
-
-        .modal-carrito {
-            position: relative;
-            background-color: whitesmoke;
-            min-width: 500px;
-            padding: 20px;
-            margin-top: 0;
-            transition: all .5s;
-            overflow-y: scroll;
-
-            h3{
-                color: royalblue;
-                padding-bottom: 5px;
-            }
-
-            #carritoCerrar {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                font-size: 20px;
-                color: royalblue;
-                border: none;
-                background-color: white;
-
-            }
-           
-
-        }
-    
-    }
-
-    
-}
+   }
