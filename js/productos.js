@@ -7,9 +7,22 @@ const contenedorCarrito = document.getElementById('carrito-contenedor')
 
 const botonVaciar = document.getElementById('vaciar-carrito');
 
+const precioTotal = document.getElementById('precioTotal');
+
 const contadorCarrito = document.getElementById('contadorCarrito');
 
 let carrito = []
+
+
+//LOCAL STORAGE, para que al actualizar no se me borren los productos cargados al carrito. aqui hago el get, el set lo hacemos en el foreach del carrito, debajo del appenchild una vez que se haya cargado todo
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){ //la condicion if es para que esto funcione si efectivamente existe carrito almacenado en el localstorage
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito();
+    }
+})
+
 
 //Funcion para darle funcionalidad al boton vaciar carrito. Cada vez que se le de click la longitud del carrito será igual a 0
 
@@ -65,11 +78,24 @@ obtenerListado();
 
 //Funcion para agregar al carrito
 
-const agregarAlCarrito = (prodId) => {
+const agregarAlCarrito = (prodId) => { 
+    const existe = carrito.some (prod => prod.id === prodId) //esta sentencia hasta el else hace que si el producto esta repetido se agregue como cantidad y no como otro producto mas
+
+    if (existe) {
+        const prod = carrito.map (prod => {
+            if (prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else {
+
+
     const item = stockProductos.find((prod) => prod.id === prodId)
-    carrito.push(item)
-    actualizarCarrito()
-    console.log(carrito)
+    carrito.push(item);
+    
+    console.log(carrito);
+}
+actualizarCarrito();
 }
 
 //Funcion para borrar del carrito
@@ -97,8 +123,12 @@ const actualizarCarrito = () => {
         <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i>/button>`
 
         contenedorCarrito.appendChild(div);
+
+        localStorage.setItem('carrito' , JSON.stringify(carrito));
     })
     contadorCarrito.innerText = carrito.length; // igualamos el numero del carrito a la longitud del array
+
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio*prod.cantidad, 0) // con esto pongo en funcionamiento precio total del carrito. por cada producto que recorre el foreach va a ir sumando al acumulador el precio del producto, siendo 0 el valor inicial del acumulador 
 
 }
 

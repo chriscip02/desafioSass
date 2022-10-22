@@ -817,6 +817,43 @@
     .headerProductos .contenedorIconoCarrito #boton-carrito:focus {
       outline: none; }
 
+.contenedorProductos .modal-contenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex; }
+  .contenedorProductos .modal-contenedor .modal-carrito {
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%; }
+    .contenedorProductos .modal-contenedor .modal-carrito .modal-titulo {
+      font-size: 2.5rem; }
+    .contenedorProductos .modal-contenedor .modal-carrito .precioProducto {
+      margin-bottom: 10px; }
+    .contenedorProductos .modal-contenedor .modal-carrito #carritoCerrar {
+      text-decoration: none;
+      color: #fff;
+      background-color: #f26250;
+      padding: 1em 3em;
+      border: 1px solid;
+      border-radius: 6px;
+      display: inline-block;
+      font-weight: 300;
+      transition: background-color .3s; }
+    .contenedorProductos .modal-contenedor .modal-carrito #carritoCerrar:hover {
+      color: #f26250;
+      background-color: #fff; }
+
 /* ESTILOS PARA LOS PRODUCTOS*/
 .contenedorProductos {
   background-color: #2b2b2c; }
