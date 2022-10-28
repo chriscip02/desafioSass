@@ -129,6 +129,8 @@ $colorMasAlineacion: (
         bottom: 0;
         background-color: #111111bd;
         display: flex;
+        opacity: 0;
+        pointer-events: none;
         
 
         .modal-carrito{            
@@ -166,10 +168,12 @@ $colorMasAlineacion: (
             #carritoCerrar:hover{
                 color: #f26250;
                 background-color: #fff;
-            }
-            
-
+            }          
         }
+    }
+    .modalActive{
+        opacity: 1;
+        pointer-events: unset;
     }
 }
 
