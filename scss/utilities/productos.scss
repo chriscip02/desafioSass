@@ -121,7 +121,7 @@ $colorMasAlineacion: (
 //estilos del modal
 .contenedorProductos{
 
-    .modal-contenedor{
+    .modal-contenedor{        
         position: fixed;
         top: 0;
         left: 0;
@@ -131,9 +131,13 @@ $colorMasAlineacion: (
         display: flex;
         opacity: 0;
         pointer-events: none;
+        transition: opacity .6s .9s;
+        --transform: translateY(-100vh);
+        --transition: transform .8s;
         
 
-        .modal-carrito{            
+        .modal-carrito{  
+            
             background-color: #fff;
             margin: auto;
             width: 90%;
@@ -144,6 +148,10 @@ $colorMasAlineacion: (
             display: grid;
             gap: 1em;
             grid-auto-columns: 100%;
+            transform: var(--transform);
+            transition: transform .3s;
+            transition: var(--transition);
+
 
             .modal-titulo{
                 font-size: 2.5rem;
@@ -152,8 +160,14 @@ $colorMasAlineacion: (
             .precioProducto{
                 margin-bottom: 10px;
             }
+
+            #vaciar-carrito{
+                display: inline-block;
+                width: 50%;
+            }
             
-            #carritoCerrar{
+            #carritoCerrar{                
+                width: 50%;
                 text-decoration: none;
                 color: #fff;
                 background-color: #f26250;
@@ -174,6 +188,10 @@ $colorMasAlineacion: (
     .modalActive{
         opacity: 1;
         pointer-events: unset;
+        transition: opacity .6s;
+        --transform: translateY(0vh);
+        --transition: transform .8s .8s;
+        
     }
 }
 
