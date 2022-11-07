@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Open+Sans:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="SALON, CORTE A NAVAJA, CORTE A TIJERA, ARREGLOS DE BARBA, BARBA, SPA, PELUQUERIA, AFEITADA, BARBERO, PELUQUERO, BIGOTE, SALON, PEINADO, CUIDADO PERSONAL">
+    <meta name="description" content="Nuestra Barbería ofrece la atención de los mejores profesionales, como también del mejor confort para que tu espera sea de lo más agradable y gratificante. Vení a conocernos!">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!--Link de css-->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- <script src="main.js"></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+    <title>La Barbería</title>
+</head>
+<body>
+    <div>
+        <header class="headerProductos">
+            <div class="contenedorLogo">
+                <img src="../media/Logo-The-Barber-Job-Dorado.svg" alt="Logo The Barber Job">
+            </div>
+            <div class="contenedorNav">
+                <nav>
+                    <ul class="contenedorMenu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contenedorIconosHeader">
+                <a href="https://www.facebook.com" target="_blank" > <img src="../media/2.png" alt="Icono de facebook" class="iconosRedesHeader"></a>
+                <a href="https://www.instagram.com" target="_blank"> <img src="../media/3.png" alt="Icono de instagram" class="iconosRedesHeader"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/1.png" alt="Icono de whatsapp" class="iconosRedesHeader"></a>
+            </div>
+
+            <div class="contenedorIconoCarrito">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#miModal" id="botonCarrito"><i class="fa fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+            </div>
+        </header>
+
+        <div class="contenedorProductos">
+            <main id="contenedor-productos">
+                
+                
+            </main>
+
+            <div class="modal fade modal-contenedor" id="miModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static" > 
+                <div class="modal-carrito modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content" >
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="modalTitle">Carrito</h3> 
+                        </div>
+                        <div class="modal-body" id="carrito-contenedor">
+                            <!--<div class="productoEnCarrito">
+                                <p>Buzo1</p
+                                <p>Precio: $1200</p
+                                <button class="boton-eliminar"><i class=fas fa-trash-alt"></i></button>
+                            </div>                
+                            -->
+                        </div>
+                        <div class="modal-footer">                        
+                            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                            <button id="vaciar-carrito" class=" btn btn-secondary boton-agregar">Vaciar carrito</button> 
+                            <button type="button" class="btn btn-secondary" id="carritoCerrar" data-bs-dismiss="modal">Continuar Comprando<i class="fas fa-times-circle"></i></button> 
+                            <button type="button" class="btn btn-primary">Ir a Pagar</button>
+
+                        </div>  
+                    </div>       
+                </div>
+            </div>
+
+        </div>
+            
+        <footer>
+            <div class="logoFooter">
+                <img src="../media/Logo-The-Barber-Job-Dorado.svg" alt="Logo The Barber Job">
+            </div>
+            <p class="textoDerechos">2021. Todos los derechos reservados</p>
+            
+            <div class= "contenedorIconosRedesFooter">
+                <a href="https://www.facebook.com" target="_blank" > <img src="../media/2.png" alt="Icono de facebook" class="iconosRedesFooter"></a>
+                <a href="https://www.instagram.com" target="_blank"> <img src="../media/3.png" alt="Icono de instagram" class="iconosRedesFooter"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"> <img src="../media/1.png" alt="Icono de whatsapp" class="iconosRedesFooter"></a>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/productos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+</body>
+
+</html>

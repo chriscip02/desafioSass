@@ -119,81 +119,81 @@ $colorMasAlineacion: (
 }
 
 //estilos del modal
-.contenedorProductos{
+// .contenedorProductos{
 
-    .modal-contenedor{        
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #111111bd;
-        display: flex;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .6s .9s;
-        --transform: translateY(-100vh);
-        --transition: transform .8s;
+//     .modal-contenedor{        
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         background-color: #111111bd;
+//         display: flex;
+//         opacity: 0;
+//         pointer-events: none;
+//         transition: opacity .6s .9s;
+//         --transform: translateY(-100vh);
+//         --transition: transform .8s;
         
 
-        .modal-carrito{  
+//         .modal-carrito{  
             
-            background-color: #fff;
-            margin: auto;
-            width: 90%;
-            max-width: 600px;
-            max-height: 90%;
-            border-radius: 6px;
-            padding: 3em 2.5em;
-            display: grid;
-            gap: 1em;
-            grid-auto-columns: 100%;
-            transform: var(--transform);
-            transition: transform .3s;
-            transition: var(--transition);
+//             background-color: #fff;
+//             margin: auto;
+//             width: 90%;
+//             max-width: 600px;
+//             max-height: 90%;
+//             border-radius: 6px;
+//             padding: 3em 2.5em;
+//             display: grid;
+//             gap: 1em;
+//             grid-auto-columns: 100%;
+//             transform: var(--transform);
+//             transition: transform .3s;
+//             transition: var(--transition);
 
 
-            .modal-titulo{
-                font-size: 2.5rem;
-            }
+//             .modal-titulo{
+//                 font-size: 2.5rem;
+//             }
 
-            .precioProducto{
-                margin-bottom: 10px;
-            }
+//             .precioProducto{
+//                 margin-bottom: 10px;
+//             }
 
-            #vaciar-carrito{
-                display: inline-block;
-                width: 50%;
-            }
+//             #vaciar-carrito{
+//                 display: inline-block;
+//                 width: 50%;
+//             }
             
-            #carritoCerrar{                
-                width: 50%;
-                text-decoration: none;
-                color: #fff;
-                background-color: #f26250;
-                padding: 1em 3em;
-                border: 1px solid;
-                border-radius: 6px;
-                display: inline-block;
-                font-weight: 300;
-                transition: background-color .3s;
-            }
+//             #carritoCerrar{                
+//                 width: 50%;
+//                 text-decoration: none;
+//                 color: #fff;
+//                 background-color: #f26250;
+//                 padding: 1em 3em;
+//                 border: 1px solid;
+//                 border-radius: 6px;
+//                 display: inline-block;
+//                 font-weight: 300;
+//                 transition: background-color .3s;
+//             }
 
-            #carritoCerrar:hover{
-                color: #f26250;
-                background-color: #fff;
-            }          
-        }
-    }
-    .modalActive{
-        opacity: 1;
-        pointer-events: unset;
-        transition: opacity .6s;
-        --transform: translateY(0vh);
-        --transition: transform .8s .8s;
+//             #carritoCerrar:hover{
+//                 color: #f26250;
+//                 background-color: #fff;
+//             }          
+//         }
+//     }
+//     .modalActive{
+//         opacity: 1;
+//         pointer-events: unset;
+//         transition: opacity .6s;
+//         --transform: translateY(0vh);
+//         --transition: transform .8s .8s;
         
-    }
-}
+//     }
+// }
 
 
 /* ESTILOS PARA LOS PRODUCTOS*/
