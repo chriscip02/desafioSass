@@ -817,6 +817,15 @@
     .headerProductos .contenedorIconoCarrito #boton-carrito:focus {
       outline: none; }
 
+/*estilos del modal*/
+.contenedorProductos .modal-contenedor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem; }
+  .contenedorProductos .modal-contenedor .img-carrito {
+    width: 200px;
+    padding: 20px; }
+
 /* ESTILOS PARA LOS PRODUCTOS*/
 .contenedorProductos {
   background-color: #2b2b2c; }

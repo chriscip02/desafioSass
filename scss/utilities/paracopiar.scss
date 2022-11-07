@@ -1,0 +1,230 @@
+/*EXTEND PARA HEADER*/
+
+%estiloIconosRedes {
+    /*height: 22.4px;*/
+    margin: 8px;
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.2);
+    }    
+}
+
+/*MIXIN*/
+
+@mixin gridPadding {
+    display: grid;
+    padding: 20px;
+    
+}
+
+
+/*MAPAS*/
+$colorMasAlineacion: (
+    color: blanchedalmond,
+    text-align: right,
+);
+
+
+
+/*RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*MEDIA QUERIE HEADER DEL HTML PRODUCTOS (el resto de los html tienen su estilo en estilos.scss*/
+.headerProductos{
+    font-family: 'Roboto', sans-serif;
+    background-color: $backgroundHeaderAndFooter;
+    @include gridPadding;    
+    border: solid rgb(32, 32, 32);
+    position: sticky;
+    z-index: 1000;
+    top: 0rem;
+    height: 112px;    
+    grid-template-areas: "logo nav iconosHeader botonCarrito";
+    grid-template-columns: 1fr 3fr 0.6fr 0.4fr;
+    .contenedorLogo{
+        transition: 0.5s;
+        &:hover{
+            transform: scale(1.1);
+        }           
+        color: map-get($map: $colorMasAlineacion, $key:color );
+        grid-area: logo;
+    }
+    .contenedorIconosHeader{
+        grid-area: iconosHeader;
+        /*margin-top: 16px;
+        margin-left: 88px;*/
+       
+            
+    }
+    .contenedorNav{
+        grid-area: nav;
+        margin: 9.92px;        
+        display: flex;
+        align-items: center;  
+    }
+        .contenedorMenu{
+            font-size: 17.6px;
+            display: flex;
+            margin-left: 80px;
+            margin-top: 24px;
+        }        
+            li{                
+                margin: 8px;
+                list-style: none;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.2);
+
+                }
+                
+            }
+            a{
+                color: blanchedalmond;
+                text-decoration: none;
+                
+                &:hover{
+                    text-decoration: none;
+                    color: whitesmoke;
+                    
+                }
+            }
+    .contenedorIconoCarrito{
+        grid-area: botonCarrito;
+        #boton-carrito {
+            border: none;
+            color: royalblue;
+            font-size: 40px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px 20px;
+            transition: all .3s;
+        }
+        #boton-carrito:hover {
+            cursor: pointer;
+            color: white;
+            background-color: royalblue;
+        }
+        #boton-carrito:focus {
+            outline: none;
+        }
+    }    
+
+}
+
+/*estilos del modal*/
+.contenedorProductos{
+
+    .modal-contenedor{  
+        display: flex; 
+        align-items: center;
+        margin-bottom: 2rem;
+        
+        .img-carrito{
+            width: 200px;
+            padding: 20px;
+            
+        }
+    
+    }
+
+}
+        
+        
+
+       /* .modal-carrito{  
+            
+            background-color: #fff;
+            margin: auto;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90%;
+            border-radius: 6px;
+            padding: 3em 2.5em;
+            display: grid;
+            gap: 1em;
+            grid-auto-columns: 100%;
+            transform: var(--transform);
+            transition: transform .3s;
+            transition: var(--transition);
+
+
+            .modal-titulo{
+                font-size: 2.5rem;
+            }
+
+            .precioProducto{
+                margin-bottom: 10px;
+            }
+
+            #vaciar-carrito{
+                display: inline-block;
+                width: 50%;
+            }
+            
+            #carritoCerrar{                
+                width: 50%;
+                text-decoration: none;
+                color: #fff;
+                background-color: #f26250;
+                padding: 1em 3em;
+                border: 1px solid;
+                border-radius: 6px;
+                display: inline-block;
+                font-weight: 300;
+                transition: background-color .3s;
+            }
+
+            #carritoCerrar:hover{
+                color: #f26250;
+                background-color: #fff;
+            }          
+        }
+    }
+    .modalActive{
+        opacity: 1;
+        pointer-events: unset;
+        transition: opacity .6s;
+        --transform: translateY(0vh);
+        --transition: transform .8s .8s;
+        
+    }
+}
+*/
+
+
+/* ESTILOS PARA LOS PRODUCTOS*/
+
+.contenedorProductos{
+    background-color: rgb(43, 43, 44);
+    #contenedor-productos {
+        max-width: 75rem;
+        margin: 0rem auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .producto {
+            background-color: #fff;
+            max-width: 20%;
+            padding: .625rem;
+            margin: .625rem;
+            margin-bottom: 1.25rem;
+            .product{
+                justify-content: center;
+            }
+            
+           
+            
+        }  
+        
+        
+    
+    }
+   }

@@ -118,6 +118,24 @@ $colorMasAlineacion: (
 
 }
 
+/*estilos del modal*/
+.contenedorProductos{
+
+    .modal-contenedor{  
+        display: flex; 
+        align-items: center;
+        margin-bottom: 2rem;
+        
+        .img-carrito{
+            width: 200px;
+            padding: 20px;
+            
+        }
+    
+    }
+
+}
+
 //estilos del modal
 // .contenedorProductos{
 
