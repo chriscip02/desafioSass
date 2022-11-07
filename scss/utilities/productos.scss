@@ -118,25 +118,27 @@ $colorMasAlineacion: (
 
 }
 
-//estilos del modal
+/*estilos del modal*/
 .contenedorProductos{
 
-    .modal-contenedor{        
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #111111bd;
-        display: flex;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .6s .9s;
-        --transform: translateY(-100vh);
-        --transition: transform .8s;
+    .modal-contenedor{  
+        display: flex; 
+        align-items: center;
+        margin-bottom: 2rem;
+        
+        .img-carrito{
+            width: 200px;
+            padding: 20px;
+            
+        }
+    
+    }
+
+}
+        
         
 
-        .modal-carrito{  
+       /* .modal-carrito{  
             
             background-color: #fff;
             margin: auto;
@@ -194,6 +196,8 @@ $colorMasAlineacion: (
         
     }
 }
+*/
+
 
 
 /* ESTILOS PARA LOS PRODUCTOS*/
