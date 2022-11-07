@@ -53,20 +53,42 @@ stockProductos.forEach((producto) => {
     const div = document.createElement('div');
     div.classList.add('producto');
     div.innerHTML = `
-    <img src=${producto.img} alt="">
-    <h3>${producto.nombre}</h3>
-    <p>${producto.desc}</p>
-    <p class="precioProducto">Precio:$ ${producto.precio}</p>
-    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-    `
-    contenedorProductos.appendChild(div)
+    <div class='products'>
+    <div class='product'>
+        <div class='contenedor-img-producto'>
+            <img class=' img-fluid img-producto' src=${producto.img} alt=''>
+        </div>
+        <div class='namePrice'>
+            <h3>${producto.nombre}</h3>
+            <span>Precio:$ ${producto.precio}</span>
+        </div>
+        
 
-    const boton = document.getElementById(`agregar${producto.id}`);
+        <p>${producto.desc}</p>
 
-    boton.addEventListener('click' , () => {
-        agregarAlCarrito(producto.id)
-    })
+        <div class='stars'>
+            <i class='fa-solid fa-star'></i>
+            <i class='fa-solid fa-star'></i>
+            <i class='fa-solid fa-star'></i>
+            <i class='fa-solid fa-star'></i>
+            <i class='fa-solid fa-star'></i>
+        </div>
+
+        <div class='add'>
+            <button id="agregar${producto.id}">Agregar al Carrito</button>
+        </div>
+        </div>
+    </div>    
+`
+contenedorProductos.appendChild(div)
+
+const boton = document.getElementById(`agregar${producto.id}`);
+
+boton.addEventListener('click' , () => {
+    agregarAlCarrito(producto.id)
 })
+})
+
 
 }catch (error) {
     console.log(error)
