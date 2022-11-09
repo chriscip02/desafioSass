@@ -817,11 +817,12 @@
     .headerProductos .contenedorIconoCarrito #boton-carrito:focus {
       outline: none; }
 
-contenedorProductos .modal-contenedor {
+.contenedorProductos .productoEnCarrito {
   display: flex;
   align-items: center;
+  gap: 4rem;
   margin-bottom: 2rem; }
-  contenedorProductos .modal-contenedor .img-carrito {
+  .contenedorProductos .productoEnCarrito .img-carrito {
     width: 200px;
     padding: 20px; }
 
@@ -829,12 +830,13 @@ contenedorProductos .modal-contenedor {
 .contenedorProductos {
   background-color: #2b2b2c; }
   .contenedorProductos #contenedor-productos {
-    max-width: 75rem;
+    max-width: 80rem;
     margin: 0rem auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
     .contenedorProductos #contenedor-productos .producto {
+      background-color: #fff;
       max-width: 20%;
       padding: .625rem;
       margin: .625rem;

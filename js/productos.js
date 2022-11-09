@@ -17,11 +17,11 @@ let carrito = []
 //LOCAL STORAGE, para que al actualizar no se me borren los productos cargados al carrito. aqui hago el get, el set lo hacemos en el foreach del carrito, debajo del appenchild una vez que se haya cargado todo
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('carrito')){ //la condicion if es para que esto funcione si efectivamente existe carrito almacenado en el localstorage
-        carrito = JSON.parse(localStorage.getItem('carrito'))
+    
+        carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         actualizarCarrito();
     }
-})
+)
 
 
 //Funcion para darle funcionalidad al boton vaciar carrito. Cada vez que se le de click la longitud del carrito será igual a 0
@@ -123,9 +123,8 @@ actualizarCarrito();
 //Funcion para borrar del carrito
 
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.id === prodId)
-    const indice = carrito.indexOf(item)
-    carrito.splice(indice, 1)
+    const prodEnCarrito = prodId
+    carrito = carrito.filter((prod) => prod.id !== prodEnCarrito) //este filtro lo que hace es traer todos los productos menos el que cumple la condicion
     actualizarCarrito();
 }
 
@@ -139,19 +138,30 @@ const actualizarCarrito = () => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `
-        <img src=${prod.img}>
-        <p>${prod.nombre}</p>
-        <p>Precio: ${prod.precio}</p>
-        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i>/button>`
+        <div>
+            <img class="img-fluid img-carrito" src=${prod.img}>
+        </div>
+
+        <div>
+            <p>${prod.nombre}</p>
+            <p>Precio: $${prod.precio}</p>
+            <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+            <button onclick="eliminarDelCarrito(${prod.id})" class="btn btn-danger">Eliminar</button>
+        </div>
+        `
 
         contenedorCarrito.appendChild(div);
 
-        localStorage.setItem('carrito' , JSON.stringify(carrito));
+       guardarStorage();
     })
     contadorCarrito.innerText = carrito.length; // igualamos el numero del carrito a la longitud del array
 
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio*prod.cantidad, 0) // con esto pongo en funcionamiento precio total del carrito. por cada producto que recorre el foreach va a ir sumando al acumulador el precio del producto, siendo 0 el valor inicial del acumulador 
+
+}
+
+function guardarStorage(){
+    localStorage.setItem('carrito' , JSON.stringify(carrito));
 
 }
 

@@ -119,21 +119,18 @@ $colorMasAlineacion: (
 }
 
 
-contenedorProductos{
-
-    .modal-contenedor{  
-        display: flex; 
+.contenedorProductos{
+    .productoEnCarrito{
+        display: flex;
         align-items: center;
+        gap: 4rem;
         margin-bottom: 2rem;
         
         .img-carrito{
             width: 200px;
             padding: 20px;
-            
         }
-    
     }
-
 }
 
 //estilos del modal
@@ -218,14 +215,15 @@ contenedorProductos{
 
 .contenedorProductos{
     background-color: rgb(43, 43, 44);
-    #contenedor-productos {
-        max-width: 75rem;
+    #contenedor-productos {        
+        max-width: 80rem;
         margin: 0rem auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
 
         .producto {
+            background-color: #fff;
             max-width: 20%;
             padding: .625rem;
             margin: .625rem;
@@ -236,4 +234,4 @@ contenedorProductos{
         
     
     }
-   }
+}
